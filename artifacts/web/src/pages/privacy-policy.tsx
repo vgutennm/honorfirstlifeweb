@@ -2,7 +2,7 @@ import { PublicLayout } from "@/components/layout/PublicLayout";
 import { useSeo } from "@/lib/seo";
 
 export default function PrivacyPolicy() {
-  useSeo("Privacy Policy | Honor First Life", "Privacy Policy for Honor First Life.");
+  useSeo("Privacy Policy | HonorFirstLife", "Privacy Policy for HonorFirstLife.");
 
   return (
     <PublicLayout>
@@ -25,13 +25,13 @@ export default function PrivacyPolicy() {
           </ul>
 
           <h2>3. SMS & Communication Consent</h2>
-          <p>By providing your phone number and submitting our form, you consent to receive calls and text messages from Honor First Life / Jesse Reiter regarding your inquiry. Message and data rates may apply. You can opt out of text messages at any time by replying STOP.</p>
+          <p>By providing your phone number and submitting our form, you consent to receive calls and text messages from HonorFirstLife / Jesse Reiter regarding your inquiry. Message and data rates may apply. You can opt out of text messages at any time by replying STOP.</p>
 
           <h2>4. Information Sharing</h2>
           <p>We do not sell your personal information to third-party lead aggregators or marketing lists. Your information is shared only with Jesse Reiter (a licensed insurance professional) and necessary service providers who assist in our operations.</p>
 
           <h2>5. Not Affiliated with the VA</h2>
-          <p>Honor First Life is a private commercial website. We are not affiliated with, endorsed by, or sponsored by the Department of Veterans Affairs (VA), the U.S. government, or any military branch.</p>
+          <p>HonorFirstLife is a private commercial website. We are not affiliated with, endorsed by, or sponsored by the Department of Veterans Affairs (VA), the U.S. government, or any military branch.</p>
 
           <h2>6. Contact Us</h2>
           <p>If you have questions about this Privacy Policy, please contact us at:</p>

@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { useLocation } from "wouter";
-import { useCreateLead, useTrackEvent } from "@workspace/api-client-react";
+import { useCreateLead } from "@workspace/api-client-react";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -17,7 +17,8 @@ import {
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
-import { trackEventObj } from "@/lib/analytics";
+import { useTrack } from "@/hooks/use-track";
+import { site } from "@/lib/site";
 import { ArrowRight, ArrowLeft, Loader2, ShieldCheck } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -64,7 +65,7 @@ const formSchema = z.object({
   company: z.string().optional() // Honeypot
 });
 
-const CONSENT_TEXT = "By submitting this form, I agree that Honor First Life / Jesse Reiter may contact me by phone, text, or email about my request. Message and data rates may apply. I understand this is a private insurance inquiry and not a VA or government program. I can opt out of text messages by replying STOP.";
+const CONSENT_TEXT = `By submitting this form, I agree that ${site.brand} / ${site.agent.name} may contact me by phone, text, or email about my request. Message and data rates may apply. I understand this is a private insurance inquiry and not a VA or government program. I can opt out of text messages by replying STOP.`;
 
 export function LeadForm() {
   const [step, setStep] = useState(1);
@@ -72,7 +73,7 @@ export function LeadForm() {
   const { toast } = useToast();
   
   const createLeadMutation = useCreateLead();
-  const trackEventApi = useTrackEvent();
+  const track = useTrack();
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -92,8 +93,7 @@ export function LeadForm() {
   useEffect(() => {
     const subscription = form.watch((value, { name, type }) => {
       if (type === 'change' && !form.formState.isDirty) {
-         trackEventObj("form_start");
-         trackEventApi.mutate({ data: { eventType: "form_start" }});
+         track("form_start");
       }
     });
     return () => subscription.unsubscribe();
@@ -101,13 +101,13 @@ export function LeadForm() {
 
   const validateStep = async () => {
     let fieldsToValidate: any[] = [];
-    if (step === 1) fieldsToValidate = ["firstName", "lastName", "phone", "state", "zip"];
-    // Optional steps don't strictly require validation to proceed, but we could enforce them
-    
+    if (step === 1) fieldsToValidate = ["firstName", "phone", "state"];
+    if (step === 2) fieldsToValidate = ["lastName", "zip"];
+    // Remaining steps collect optional details validated on final submit.
+
     const isValid = await form.trigger(fieldsToValidate);
     if (isValid) {
-      trackEventObj(`form_step_${step}_complete`);
-      trackEventApi.mutate({ data: { eventType: `form_step_${step}_complete` }});
+      track("form_step_complete", { step });
       setStep(s => Math.min(s + 1, 4));
       window.scrollTo({ top: document.getElementById('lead-form-container')?.offsetTop || 0, behavior: 'smooth' });
     }
@@ -120,9 +120,8 @@ export function LeadForm() {
     }
 
     const urlParams = new URLSearchParams(window.location.search);
-    
-    trackEventObj("form_submit");
-    trackEventApi.mutate({ data: { eventType: "form_submit" }});
+
+    track("form_submit");
 
     createLeadMutation.mutate(
       { 
@@ -184,19 +183,13 @@ export function LeadForm() {
 
             {step === 1 && (
               <div className="space-y-4 animate-in fade-in slide-in-from-bottom-4">
-                <h3 className="text-xl font-bold text-navy font-serif mb-4">Where should Jesse send the information?</h3>
+                <h3 className="text-xl font-bold text-navy font-serif mb-4">See what options may fit your family</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <FormField control={form.control} name="firstName" render={({ field }) => (
                     <FormItem><FormLabel>First Name *</FormLabel><FormControl><Input {...field} /></FormControl><FormMessage /></FormItem>
                   )} />
-                  <FormField control={form.control} name="lastName" render={({ field }) => (
-                    <FormItem><FormLabel>Last Name *</FormLabel><FormControl><Input {...field} /></FormControl><FormMessage /></FormItem>
-                  )} />
                   <FormField control={form.control} name="phone" render={({ field }) => (
                     <FormItem><FormLabel>Phone Number *</FormLabel><FormControl><Input type="tel" {...field} /></FormControl><FormMessage /></FormItem>
-                  )} />
-                  <FormField control={form.control} name="email" render={({ field }) => (
-                    <FormItem><FormLabel>Email Address</FormLabel><FormControl><Input type="email" {...field} /></FormControl><FormMessage /></FormItem>
                   )} />
                   <FormField control={form.control} name="state" render={({ field }) => (
                     <FormItem>
@@ -206,22 +199,6 @@ export function LeadForm() {
                         <SelectContent>{US_STATES.map(s => <SelectItem key={s} value={s}>{s}</SelectItem>)}</SelectContent>
                       </Select>
                       <FormMessage />
-                    </FormItem>
-                  )} />
-                  <FormField control={form.control} name="zip" render={({ field }) => (
-                    <FormItem><FormLabel>ZIP Code *</FormLabel><FormControl><Input {...field} /></FormControl><FormMessage /></FormItem>
-                  )} />
-                  <FormField control={form.control} name="contactPreference" render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Contact Preference</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
-                        <FormControl><SelectTrigger><SelectValue placeholder="How should we contact you?" /></SelectTrigger></FormControl>
-                        <SelectContent>
-                          <SelectItem value="Call">Call</SelectItem>
-                          <SelectItem value="Text">Text</SelectItem>
-                          <SelectItem value="Either">Either</SelectItem>
-                        </SelectContent>
-                      </Select>
                     </FormItem>
                   )} />
                   <FormField control={form.control} name="bestContactTime" render={({ field }) => (
@@ -239,13 +216,58 @@ export function LeadForm() {
                     </FormItem>
                   )} />
                 </div>
+                <FormField control={form.control} name="productInterest" render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Primary Interest</FormLabel>
+                    <Select onValueChange={field.onChange} defaultValue={field.value}>
+                      <FormControl><SelectTrigger><SelectValue placeholder="What are you most interested in?" /></SelectTrigger></FormControl>
+                      <SelectContent>
+                        <SelectItem value="Final expense/burial">Final expense/burial</SelectItem>
+                        <SelectItem value="Whole life">Whole life</SelectItem>
+                        <SelectItem value="Term life">Term life</SelectItem>
+                        <SelectItem value="Mortgage protection">Mortgage protection</SelectItem>
+                        <SelectItem value="IUL/cash value">IUL/cash value</SelectItem>
+                        <SelectItem value="Policy review/replace">Policy review/replace</SelectItem>
+                        <SelectItem value="Not sure yet">Not sure yet</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </FormItem>
+                )} />
+                <p className="text-xs text-muted-foreground">
+                  Prefer to talk first? You can call or text {site.agent.name.split(" ")[0]} directly using the buttons on this page.
+                </p>
               </div>
             )}
 
             {step === 2 && (
               <div className="space-y-4 animate-in fade-in slide-in-from-bottom-4">
-                <h3 className="text-xl font-bold text-navy font-serif mb-4">Tell us about your service and family</h3>
-                
+                <h3 className="text-xl font-bold text-navy font-serif mb-4">A few more details so Jesse can help</h3>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <FormField control={form.control} name="lastName" render={({ field }) => (
+                    <FormItem><FormLabel>Last Name *</FormLabel><FormControl><Input {...field} /></FormControl><FormMessage /></FormItem>
+                  )} />
+                  <FormField control={form.control} name="email" render={({ field }) => (
+                    <FormItem><FormLabel>Email Address</FormLabel><FormControl><Input type="email" {...field} /></FormControl><FormMessage /></FormItem>
+                  )} />
+                  <FormField control={form.control} name="zip" render={({ field }) => (
+                    <FormItem><FormLabel>ZIP Code *</FormLabel><FormControl><Input {...field} /></FormControl><FormMessage /></FormItem>
+                  )} />
+                  <FormField control={form.control} name="contactPreference" render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Contact Preference</FormLabel>
+                      <Select onValueChange={field.onChange} defaultValue={field.value}>
+                        <FormControl><SelectTrigger><SelectValue placeholder="How should we contact you?" /></SelectTrigger></FormControl>
+                        <SelectContent>
+                          <SelectItem value="Call">Call</SelectItem>
+                          <SelectItem value="Text">Text</SelectItem>
+                          <SelectItem value="Either">Either</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </FormItem>
+                  )} />
+                </div>
+
                 <FormField control={form.control} name="veteranStatus" render={({ field }) => (
                   <FormItem>
                     <FormLabel>Veteran Status</FormLabel>
@@ -316,24 +338,6 @@ export function LeadForm() {
             {step === 3 && (
               <div className="space-y-4 animate-in fade-in slide-in-from-bottom-4">
                 <h3 className="text-xl font-bold text-navy font-serif mb-4">What kind of coverage are you looking for?</h3>
-                
-                <FormField control={form.control} name="productInterest" render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Product Interest</FormLabel>
-                    <Select onValueChange={field.onChange} defaultValue={field.value}>
-                      <FormControl><SelectTrigger><SelectValue placeholder="Select product type" /></SelectTrigger></FormControl>
-                      <SelectContent>
-                        <SelectItem value="Final expense/burial">Final expense/burial</SelectItem>
-                        <SelectItem value="Whole life">Whole life</SelectItem>
-                        <SelectItem value="Term life">Term life</SelectItem>
-                        <SelectItem value="Mortgage protection">Mortgage protection</SelectItem>
-                        <SelectItem value="IUL/cash value">IUL/cash value</SelectItem>
-                        <SelectItem value="Policy review/replace">Policy review/replace</SelectItem>
-                        <SelectItem value="Not sure yet">Not sure yet</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </FormItem>
-                )} />
 
                 <FormField control={form.control} name="desiredCoverageRange" render={({ field }) => (
                   <FormItem>

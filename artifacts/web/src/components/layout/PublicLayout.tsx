@@ -117,7 +117,16 @@ export function PublicLayout({ children }: { children: React.ReactNode }) {
             <p>{disclosures.replacement}</p>
             <p>{disclosures.iul}</p>
             <p className="text-center pt-4">
-              &copy; {new Date().getFullYear()} {site.brand}. All rights reserved.
+              &copy; {new Date().getFullYear()} {site.brand}. All rights reserved. Website by{" "}
+              <a
+                href="http://SetUpShopOnline.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-gold"
+              >
+                SetUpShopOnline
+              </a>
+              .
             </p>
           </div>
         </div>

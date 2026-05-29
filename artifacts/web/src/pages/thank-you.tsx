@@ -7,7 +7,10 @@ import { useTrack } from "@/hooks/use-track";
 import { site, cta } from "@/lib/site";
 
 export default function ThankYou() {
-  useSeo(`Thank You | ${site.brand}`, "Your request has been received.");
+  useSeo(`Thank You | ${site.brand}`, "Your request has been received.", {
+    path: "/thank-you",
+    noindex: true,
+  });
 
   const track = useTrack();
 

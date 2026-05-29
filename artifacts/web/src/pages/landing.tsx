@@ -46,6 +46,7 @@ export default function Landing() {
   useSeo(
     `Veteran Life Insurance & Final Expense Options | ${site.brand}`,
     "Simple, respectful life insurance guidance for veterans and families. Call, text, or request a private review of final expense, whole life, IUL, mortgage protection, and policy review options with a licensed professional. Not affiliated with the VA or government.",
+    { path: "/" },
   );
 
   const track = useTrack();

@@ -2,7 +2,11 @@ import { PublicLayout } from "@/components/layout/PublicLayout";
 import { useSeo } from "@/lib/seo";
 
 export default function PrivacyPolicy() {
-  useSeo("Privacy Policy | HonorFirstLife", "Privacy Policy for HonorFirstLife.");
+  useSeo(
+    "Privacy Policy | HonorFirstLife",
+    "How HonorFirstLife collects, uses, and protects your information. We never collect Social Security numbers, banking, or payment information on this website.",
+    { path: "/privacy-policy" },
+  );
 
   return (
     <PublicLayout>

@@ -4,7 +4,11 @@ import { ShieldAlert } from "lucide-react";
 import { Link } from "wouter";
 
 export default function NotAffiliated() {
-  useSeo("Not Affiliated With VA | HonorFirstLife", "HonorFirstLife is a private resource and is not affiliated with the VA or government.");
+  useSeo(
+    "Not Affiliated With the VA | HonorFirstLife",
+    "HonorFirstLife is a private, independent life insurance resource. We are not affiliated with, endorsed by, or sponsored by the VA, the U.S. government, or any military branch.",
+    { path: "/not-affiliated-with-va" },
+  );
 
   return (
     <PublicLayout>

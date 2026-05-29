@@ -2,7 +2,11 @@ import { PublicLayout } from "@/components/layout/PublicLayout";
 import { useSeo } from "@/lib/seo";
 
 export default function Terms() {
-  useSeo("Terms of Service | HonorFirstLife", "Terms of Service for HonorFirstLife.");
+  useSeo(
+    "Terms of Service | HonorFirstLife",
+    "Terms of Service for HonorFirstLife, a private life insurance resource not affiliated with the VA or government.",
+    { path: "/terms" },
+  );
 
   return (
     <PublicLayout>

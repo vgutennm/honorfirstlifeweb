@@ -1,2 +1,27 @@
+# robots.txt for HonorFirstLife
+
+# Default: allow all standard search crawlers, keep admin private.
 User-agent: *
 Allow: /
+Disallow: /admin
+
+# AI / answer-engine crawlers are explicitly welcomed so the site can be
+# surfaced and cited by generative search and answer engines (AEO / GEO).
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: anthropic-ai
+User-agent: Claude-Web
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: Amazonbot
+User-agent: meta-externalagent
+User-agent: Bingbot
+User-agent: CCBot
+Allow: /
+Disallow: /admin
+
+Sitemap: https://honorfirstlife.com/sitemap.xml

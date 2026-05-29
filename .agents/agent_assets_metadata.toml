@@ -1,0 +1,32 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "tdtLpcqwu3KRtO2JkFrNc"
+uri = "file://artifacts/web/public/logo.png"
+type = "image"
+title = "Professional protective shield logo"
+
+[[generated]]
+id = "r-X6zLD4u7Ti89nfycqCp"
+uri = "file://artifacts/web/public/hero.png"
+type = "image"
+title = "Older couple reviewing paperwork"
+
+[[generated]]
+id = "YhwKFIXWjsKyrojYmHhao"
+uri = "file://artifacts/web/public/jesse.png"
+type = "image"
+title = "Professional advisor headshot"
+
+[[generated]]
+id = "sWk8wbuzH0mg6MGd1SgIv"
+uri = "file://artifacts/web/public/family-shield.png"
+type = "image"
+title = "Family protection shield illustration"
+
+[[generated]]
+id = "cJPHmywz7bhJ8Id6L7Ipi"
+uri = "file://artifacts/web/public/video-thumb.png"
+type = "image"
+title = "Video placeholder thumbnail"

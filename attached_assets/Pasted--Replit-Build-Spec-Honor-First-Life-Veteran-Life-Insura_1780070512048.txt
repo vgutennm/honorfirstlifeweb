@@ -1,0 +1,1222 @@
+# Replit Build Spec — Honor First Life Veteran Life Insurance Landing Page
+
+Build a production-ready, mobile-first lead generation website for **Honor First Life** at **honorfirstlife.com**.
+
+This website will be used as the landing page for PPC campaigns managed by an external agency. The first version should focus on **one high-converting veteran life insurance / final expense landing page** designed to generate phone calls, text messages, and form submissions for Jesse Reiter.
+
+The site should be inspired by the simplicity and conversion structure of **vetlifecoverage.com/quote**, but must not copy its branding, copy, images, testimonials, layout exactly, or any non-compliant claims. Use the best design ideas only: simple hero, emotional headline, short quiz-style form, veteran trust positioning, social proof/testimonial placeholders, agent credibility section, clear CTAs, privacy reassurance, and repeated “Get Help / Check Options” calls to action.
+
+## Core Strategy
+
+This should not feel like a generic life insurance website. It should feel like a trustworthy, respectful, veteran-focused private insurance review page.
+
+The target visitor is usually an older veteran, often age 58–78, skeptical of online insurance ads, protective of family, worried about funeral costs, and concerned about being pressured, scammed, or misled.
+
+The site must solve these problems:
+
+1. Make the visitor feel safe.
+2. Make it clear Jesse is not the VA or government.
+3. Make it easy to call, text, or submit a form.
+4. Make the visitor remember why they submitted the form.
+5. Set realistic expectations around coverage and approval.
+6. Give Jesse better lead quality than generic vendor leads.
+7. Capture tracking data for Google Ads, GA4, GTM, and future CRM workflows.
+
+## Brand Name
+
+Use:
+
+**Honor First Life**
+
+Optional tagline:
+
+**Private Life Insurance Guidance for Veterans and Families**
+
+## Domain
+
+Use:
+
+**honorfirstlife.com**
+
+Set up public routes:
+
+* `/`
+* `/thank-you`
+* `/privacy-policy`
+* `/terms`
+* `/not-affiliated-with-va`
+
+Set up admin routes:
+
+* `/admin`
+* `/admin/leads`
+* `/admin/leads/:id`
+* `/admin/export`
+
+Set up API route:
+
+* `/api/healthz`
+
+The logo in the top-left must be clickable and always return the user to the homepage.
+
+## Important Compliance Positioning
+
+The site must clearly and repeatedly say:
+
+**Honor First Life is a private life insurance resource and is not affiliated with the VA, U.S. government, or any military branch.**
+
+Do not make the site look like a government program.
+
+Do not use official seals, VA-style marks, military branch logos, fake government badges, or anything that implies government affiliation.
+
+Avoid these claims:
+
+* Guaranteed approval
+* Lowest rates
+* Best rates
+* Better than the VA
+* Free VA benefit
+* Government benefit
+* Everyone qualifies
+* No medical questions for everyone
+* No exam guaranteed
+* Veterans get special government rates
+* Coverage regardless of health
+
+Use safer language:
+
+* Options may be available.
+* Day-one coverage options may be available depending on approval.
+* Coverage, pricing, and approval depend on age, health, state, product, carrier, and underwriting.
+* A licensed insurance professional can help review private life insurance options.
+
+## Primary Conversion Goals
+
+The page should drive:
+
+1. Phone calls to Jesse.
+2. Text messages to Jesse.
+3. Form submissions.
+4. Callback requests.
+5. Thank-you page conversion tracking.
+
+## Design Direction
+
+The design should feel:
+
+* Trustworthy
+* Veteran-respectful
+* Mature
+* Calm
+* Clean
+* Human
+* Simple
+* Slightly patriotic without being cheesy
+* Professional but not corporate
+* Clear enough for older users
+
+Use a conversion structure inspired by the competitor page:
+
+1. Strong above-the-fold hero.
+2. Benefit badges under headline.
+3. Immediate CTA.
+4. Short quiz/form.
+5. Short emotional story/why section.
+6. Trust and social proof/testimonial section.
+7. Agent/founder credibility block.
+8. FAQ.
+9. Privacy and disclosure section.
+10. Repeated CTA.
+
+## Color Palette
+
+Use:
+
+* Deep Navy: `#0B1F3A`
+* Warm Gold: `#C8A24A`
+* Clean White: `#FFFFFF`
+* Soft Gray: `#F5F7FA`
+* Trust Blue: `#174EA6`
+* Muted Red Accent: `#B3261E`
+
+Do not overuse red. Red is only an accent.
+
+## Typography
+
+Use large readable typography for older visitors.
+
+Recommended:
+
+* Strong serif or slab serif for headings.
+* Clean sans-serif for body copy.
+* Large form labels.
+* Large buttons.
+* High contrast.
+* No tiny gray text except legal disclaimers.
+
+## Homepage / Landing Page Structure
+
+### 1. Header
+
+Desktop header:
+
+* Left: Honor First Life logo
+* Right:
+
+  * “Speak With Jesse”
+  * Phone CTA button
+  * “Check My Options” CTA button
+
+Mobile header:
+
+* Logo
+* Phone icon
+* Menu or CTA button
+
+Sticky mobile bottom CTA bar:
+
+* Call
+* Text
+* Check Options
+
+### 2. Hero Section
+
+Use a split hero layout on desktop:
+
+Left side: headline, copy, CTA buttons, trust badges.
+Right side: short quiz card/form starter.
+
+Mobile: headline first, CTA buttons second, form third.
+
+Hero headline:
+
+**Veteran Life Insurance Made Simple**
+
+Subheadline:
+
+**Protect your family from funeral costs, final expenses, and leftover bills with clear, respectful guidance from a licensed life insurance professional.**
+
+Support line:
+
+**Private life insurance guidance. Not affiliated with the VA, U.S. government, or any military branch.**
+
+Benefit badges under hero:
+
+* Veteran-focused guidance
+* Private life insurance options
+* Day-one coverage options may be available
+* No-pressure review
+* Speak with a licensed professional
+
+Primary CTA:
+
+**Check My Options**
+
+Secondary CTA:
+
+**Call Jesse Now**
+
+Text CTA:
+
+**Text Jesse**
+
+Hero trust note:
+
+**No Social Security number, banking information, or payment information is collected on this website.**
+
+### 3. Quiz/Form Starter Card
+
+Create a prominent form card above the fold.
+
+Card headline:
+
+**See What Options May Fit Your Family**
+
+Subheadline:
+
+**Answer a few quick questions so Jesse knows how to help when he calls.**
+
+Button:
+
+**Start My Private Review**
+
+The quiz should feel lightweight and easy. It should not feel like a long application.
+
+Use progress indicator:
+
+**Step 1 of 4**
+
+### 4. Trust Strip
+
+Add a horizontal trust strip under the hero.
+
+Trust strip items:
+
+* Licensed life insurance guidance
+* Multiple carrier options
+* No-pressure conversation
+* Veteran-focused support
+* Private company, not VA/government
+* Coverage depends on approval
+
+Do not show carrier logos unless Jesse confirms permission.
+
+### 5. Emotional Problem Section
+
+Headline:
+
+**You served your country. Now make sure your family is not left guessing.**
+
+Copy:
+
+Many veterans are not looking for more paperwork or a sales pitch. They simply want to know that if something happened, their spouse, children, or loved ones would not be left trying to cover funeral costs, final expenses, medical bills, mortgage pressure, or other leftover bills during the hardest week of their life.
+
+Add question block:
+
+**If something happened unexpectedly, would your spouse or children know exactly how the final expenses would be handled?**
+
+Supporting copy:
+
+**Or would they be left trying to figure it out while also grieving?**
+
+CTA button:
+
+**Check My Options**
+
+### 6. What This Helps With
+
+Create 4 cards:
+
+Card 1:
+
+**Final Expense / Burial Coverage**
+Help prepare for funeral, cremation, burial, and final bills.
+
+Card 2:
+
+**Family Protection**
+Help reduce the financial burden on a spouse, child, or loved one.
+
+Card 3:
+
+**Policy Review**
+Already have life insurance? Jesse can help review whether it still fits your goals and budget.
+
+Card 4:
+
+**Mortgage / Legacy Planning**
+Discuss private options that may help protect your home, family, or legacy.
+
+### 7. “What This Is / What This Is Not” Section
+
+Headline:
+
+**Clear guidance. No VA confusion. No pressure.**
+
+Two-column layout.
+
+Column 1: This Is
+
+* A private life insurance review.
+* A way to compare options that may fit your age, health, state, goals, and budget.
+* A conversation with a licensed insurance professional.
+* A way to ask questions before applying.
+* A way to review existing coverage if you already have a policy.
+
+Column 2: This Is Not
+
+* Not the VA.
+* Not a government program.
+* Not guaranteed approval.
+* Not a promise of a specific rate.
+* Not a spammy lead marketplace.
+* Not an instant policy application.
+
+### 8. Social Proof / Testimonial Placeholder Section
+
+Create a section inspired by the competitor’s testimonial section, but use placeholders until Jesse has approved real testimonials.
+
+Headline:
+
+**What Veterans and Families Want From This Conversation**
+
+Subheadline:
+
+**Simple answers. Respectful guidance. No pressure.**
+
+Use 3 testimonial placeholder cards that clearly say “Placeholder — replace with approved testimonial.”
+
+Placeholder card examples:
+
+1. “Jesse helped explain my options in plain English.”
+2. “I wanted to make sure my family would not be left with the bill.”
+3. “I already had coverage, but wanted someone to help me review it.”
+
+Important: Mark all testimonials as placeholders and do not present them as real testimonials until Jesse provides approved testimonial content with permission.
+
+### 9. Video Placeholder Section
+
+Add a video section near the testimonials.
+
+Headline:
+
+**A Quick Message From Jesse**
+
+Video placeholder:
+
+* “Future video: Jesse explains how the private life insurance review works.”
+* Add play button design placeholder.
+* Do not autoplay video with sound.
+* Mobile-friendly video aspect ratio.
+
+Suggested video script text below placeholder:
+
+**In this short video, Jesse explains what happens after you submit the form, why this is not a VA program, and how he helps veterans compare private life insurance options.**
+
+### 10. Meet Jesse Section
+
+Headline:
+
+**Speak With Jesse Reiter**
+
+Copy:
+
+Jesse Reiter is a licensed life insurance professional who helps veterans and families review private life insurance options. His goal is simple: help you understand what may fit your family without pressure, confusion, or sales games.
+
+Include placeholders:
+
+* Jesse headshot
+* License/NPN
+* Licensed states
+* Phone
+* Email
+* Digital business card link
+* “Save Jesse’s number” CTA
+
+Use current licensed states:
+
+* NJ
+* FL
+* IN
+* MS
+* OH
+* OR
+* WA
+* CA
+* TN
+* VA
+
+Add note:
+
+**Services are available only where Jesse Reiter is properly licensed and appointed.**
+
+### 11. How It Works Section
+
+Headline:
+
+**How the Private Review Works**
+
+Step 1:
+
+**Answer a few simple questions**
+No Social Security number, banking information, or payment information is collected on this website.
+
+Step 2:
+
+**Jesse reviews your request**
+Jesse looks at your state, age range, goals, and basic information.
+
+Step 3:
+
+**Talk through your options**
+You can ask questions, compare what may be available, and decide whether it makes sense to apply.
+
+Step 4:
+
+**Apply only if it makes sense**
+Coverage is not active unless you complete an application, are approved by a carrier, and make the required first premium payment.
+
+### 12. Main Lead Form
+
+Build a multi-step form.
+
+Do not build one giant form.
+
+Use large buttons, clear spacing, and minimal typing.
+
+The form should submit to the backend, store the lead, notify Jesse, and redirect to `/thank-you`.
+
+#### Form Step 1: Contact Info
+
+Fields:
+
+* First name
+* Last name
+* Mobile phone
+* Email
+* State
+* ZIP code
+* Best contact method:
+
+  * Call
+  * Text
+  * Either
+* Best time:
+
+  * Morning
+  * Afternoon
+  * Evening
+  * ASAP
+
+Validation:
+
+* First name required.
+* Last name required.
+* Phone required.
+* State required.
+* ZIP required.
+* Email optional but recommended.
+* Show plain-English inline errors.
+
+#### Form Step 2: Veteran / Family Protection Info
+
+Fields:
+
+* Are you a veteran?
+
+  * Yes
+  * No
+  * Spouse/family member of a veteran
+* Branch of service:
+
+  * Army
+  * Navy
+  * Air Force
+  * Marines
+  * Coast Guard
+  * Space Force
+  * Prefer not to say
+* Who are you mainly trying to protect?
+
+  * Spouse
+  * Child/children
+  * Family member
+  * Estate/final expenses
+  * Other
+* What made you look into this today?
+
+  * I want to cover funeral/final expenses
+  * I want to leave money behind
+  * I want to review coverage I already have
+  * I want mortgage protection
+  * I want to understand my options
+  * Other
+
+This “what made you look into this today?” field is important because it helps the prospect remember the form and gives Jesse a better opening when he calls.
+
+#### Form Step 3: Coverage Interest
+
+Fields:
+
+* What type of help are you looking for?
+
+  * Final expense / burial insurance
+  * Whole life insurance
+  * Term life insurance
+  * Mortgage protection
+  * IUL / cash value life insurance
+  * Policy review / replace current coverage
+  * Not sure yet
+* Desired coverage range:
+
+  * $5,000–$10,000
+  * $10,000–$25,000
+  * $25,000–$50,000
+  * $50,000+
+  * Not sure
+* Do you already have life insurance?
+
+  * Yes
+  * No
+  * Not sure
+* Would you like Jesse to compare your current coverage?
+
+  * Yes
+  * No
+  * Maybe
+
+If user selects $50,000+, show this note:
+
+**Coverage availability depends on age, health, state, product, carrier, and underwriting. Jesse will help review realistic options.**
+
+#### Form Step 4: Basic Eligibility Review
+
+Fields:
+
+* Age range:
+
+  * Under 40
+  * 40–49
+  * 50–59
+  * 60–69
+  * 70–79
+  * 80+
+* Tobacco/nicotine use:
+
+  * No
+  * Yes
+  * Prefer to discuss by phone
+* General health:
+
+  * Generally healthy
+  * Some health conditions
+  * Serious/recent health issues
+  * Prefer to discuss by phone
+* Are you comfortable with Jesse calling you to review options?
+
+  * Yes, call me
+  * Text me first
+  * I want to schedule a time
+
+Add disclaimer:
+
+**Do not enter Social Security numbers, banking information, payment information, VA claim numbers, Medicare numbers, or full medical history into this form. Jesse will review any application details directly with you if you decide to move forward.**
+
+#### Consent Checkbox
+
+Required checkbox:
+
+**By submitting this form, I agree that Honor First Life / Jesse Reiter may contact me by phone, text, or email about my request. Message and data rates may apply. I understand this is a private insurance inquiry and not a VA or government program. I can opt out of text messages by replying STOP.**
+
+Include links to:
+
+* Privacy Policy
+* Terms
+
+### 13. Thank-You Page
+
+Route:
+
+`/thank-you`
+
+Headline:
+
+**Your request was received.**
+
+Copy:
+
+Thank you. Jesse received your request and may call or text you soon based on the contact preference you selected.
+
+Callout:
+
+**Please save this number so you recognize Jesse’s call: [JESSE PHONE NUMBER]**
+
+Reminder:
+
+**Honor First Life is a private life insurance resource and is not affiliated with the VA, U.S. government, or any military branch.**
+
+Buttons:
+
+* Call Jesse Now
+* Text Jesse
+* Return Home
+
+Tracking events:
+
+* GA4 event: `lead_submit`
+* Google Ads conversion event: `lead_form_submit`
+* Meta pixel event placeholder: `Lead`
+* Thank-you page view: `thank_you_view`
+
+### 14. Footer
+
+Footer must include:
+
+* Honor First Life logo
+* Phone
+* Email
+* Privacy Policy
+* Terms
+* Not Affiliated With VA
+* Licensing disclaimer
+
+Footer disclosure:
+
+**Honor First Life is a private life insurance resource. Not affiliated with the VA, U.S. government, or any military branch. Product availability, coverage amounts, premiums, and approval depend on age, health, state, product, carrier, and underwriting. Submitting this form does not create coverage or guarantee approval. A licensed insurance professional may contact you to review available options. Services are available only where Jesse Reiter is properly licensed and appointed.**
+
+## Lead Quality Logic
+
+Create hidden internal lead score. Do not show it to the visitor.
+
+Higher priority:
+
+* Licensed state match
+* Veteran or spouse/family member of veteran
+* Age 50+
+* Final expense / family protection goal
+* Provides phone
+* Chooses ASAP or today
+* Gives a clear reason for looking into coverage
+* Wants a coverage review
+* Requests phone call
+
+Lower priority:
+
+* Outside licensed states
+* No phone
+* Unclear intent
+* Wants only email
+* Under 40 and only wants IUL
+
+Do not reject leads automatically based on health, age, income, veteran status, or protected/sensitive factors. Use lead score only for prioritization.
+
+Lead statuses:
+
+* New
+* Hot / Call Now
+* Contacted
+* Appointment Set
+* No Answer
+* Bad Number
+* Not Licensed State
+* Not Qualified / Nurture
+* Application Started
+* Submitted
+* Issued
+* Cancelled / Chargeback Risk
+
+## Notifications
+
+When a lead submits the form, immediately notify Jesse.
+
+### SMS Notification to Jesse
+
+Example:
+
+**New Honor First Life lead: John Smith, 67, NJ, Veteran: Army, Goal: final expense, Wants call: ASAP, Phone: 555-555-5555. Source: Google / Campaign / Keyword.**
+
+### Email Notification to Jesse
+
+Subject:
+
+**New Honor First Life Lead — [Name] — [State] — [Goal]**
+
+Include:
+
+* Name
+* Phone
+* Email
+* State
+* ZIP
+* Age range
+* Veteran status
+* Branch
+* Goal
+* Coverage interest
+* Desired coverage range
+* Existing coverage
+* Best contact time
+* Preferred contact method
+* Consent timestamp
+* UTM data
+* GCLID / GBRAID / WBRAID
+* IP address
+* User agent
+* Link to admin lead detail page
+
+### Prospect Confirmation Text
+
+Only send if consent checkbox is checked.
+
+Example:
+
+**Hi [First Name], this is Jesse with Honor First Life. I received your request about private life insurance options. I’ll reach out based on the time you selected. You can also call me directly here: [phone]. Reply STOP to opt out.**
+
+## CRM / Lead Storage
+
+Version 1 must store leads directly in the website database.
+
+Also prepare future CRM integration with webhook settings.
+
+Future CRM options:
+
+* My Advisor CRM
+* GoHighLevel
+* Zoho / Bigin
+* HubSpot
+* Zapier
+* Make
+* CSV export
+
+## Admin Dashboard
+
+Build a simple admin dashboard.
+
+Features:
+
+* Admin login
+* Lead list
+* Filter by status
+* Filter by date
+* Filter by state
+* Filter by lead score
+* Filter by product interest
+* Search by name, phone, or email
+* Lead detail page
+* Click-to-call button
+* Click-to-text button
+* Copy lead details
+* Add notes
+* Change lead status
+* Mark lead as good/bad
+* Export CSV
+* View campaign/source/keyword
+* View consent timestamp
+
+Dashboard metrics:
+
+* Leads today
+* Leads this week
+* Hot leads
+* Calls requested ASAP
+* Form conversion count
+* Calls clicked
+* Texts clicked
+* Cost-per-lead placeholder
+* Issued policy count placeholder
+
+## Technical Stack
+
+Use:
+
+* React
+* TypeScript
+* Vite
+* Tailwind CSS
+* Node.js / Express
+* PostgreSQL
+* Drizzle ORM
+* Zod validation
+* Environment variables for secrets
+* Cloudflare Turnstile or reCAPTCHA
+* Nodemailer or transactional email provider
+* Twilio or SMS provider optional
+* Webhook support for CRM/Zapier/Make
+
+## Backend API Endpoints
+
+### `POST /api/leads`
+
+Creates lead.
+
+Must:
+
+* Validate with Zod
+* Sanitize input
+* Store lead
+* Store UTM data
+* Store consent timestamp
+* Store IP and user agent
+* Calculate lead score
+* Send email/SMS notification
+* Trigger webhook if configured
+* Return success and redirect frontend to `/thank-you`
+
+### `GET /api/admin/leads`
+
+Admin only.
+
+### `GET /api/admin/leads/:id`
+
+Admin only.
+
+### `PATCH /api/admin/leads/:id`
+
+Update status, notes, lead quality, outcome.
+
+### `GET /api/admin/export`
+
+CSV export.
+
+### `POST /api/webhooks/crm-test`
+
+Test CRM/webhook connection.
+
+### `GET /api/healthz`
+
+Public health check.
+
+## Database Tables
+
+### `leads`
+
+Fields:
+
+* id
+* created_at
+* updated_at
+* first_name
+* last_name
+* phone
+* email
+* state
+* zip
+* age_range
+* veteran_status
+* branch
+* primary_goal
+* beneficiary_type
+* product_interest
+* desired_coverage_range
+* existing_coverage
+* wants_policy_review
+* contact_preference
+* best_contact_time
+* tobacco_status
+* general_health_range
+* consent_contact
+* consent_text
+* consent_timestamp
+* ip_address
+* user_agent
+* landing_page
+* referrer
+* utm_source
+* utm_medium
+* utm_campaign
+* utm_content
+* utm_term
+* gclid
+* gbraid
+* wbraid
+* fbclid
+* msclkid
+* lead_score
+* status
+* admin_notes
+* lead_quality
+* outcome
+* crm_sync_status
+* crm_sync_error
+* notification_sent
+* notification_error
+
+### `lead_events`
+
+Fields:
+
+* id
+* lead_id
+* event_type
+* event_data
+* created_at
+
+### `settings`
+
+Fields:
+
+* id
+* key
+* value
+* encrypted_boolean
+
+Settings should support:
+
+* GTM ID
+* GA4 ID
+* Google Ads conversion ID
+* Google Ads conversion label
+* Meta Pixel ID
+* Notification email
+* Notification phone
+* CRM webhook URL
+* Disclaimer copy
+* Jesse phone
+* Jesse email
+
+## Analytics and Tracking
+
+Add placeholders for:
+
+* Google Tag Manager container ID
+* GA4 Measurement ID
+* Google Ads Conversion ID
+* Google Ads Conversion Label
+* Meta Pixel ID
+* Microsoft Ads UET tag
+* Call tracking script
+
+Track events:
+
+* `page_view`
+* `form_start`
+* `form_step_1_complete`
+* `form_step_2_complete`
+* `form_step_3_complete`
+* `form_submit`
+* `thank_you_view`
+* `click_to_call`
+* `click_to_text`
+* `privacy_policy_click`
+* `save_number_click`
+* `crm_sync_success`
+* `crm_sync_failed`
+
+Capture:
+
+* `utm_source`
+* `utm_medium`
+* `utm_campaign`
+* `utm_content`
+* `utm_term`
+* `gclid`
+* `gbraid`
+* `wbraid`
+* `fbclid`
+* `msclkid`
+* referrer
+* landing page URL
+* device type
+* browser
+* timestamp
+
+## SEO and AI SEO
+
+Even though this is a PPC landing page, build it properly for SEO and AI SEO.
+
+Page title:
+
+**Veteran Life Insurance & Final Expense Options | Honor First Life**
+
+Meta description:
+
+**Simple, respectful life insurance guidance for veterans and families. Review final expense, whole life, term life, mortgage protection, and policy review options with a licensed professional. Not affiliated with the VA or government.**
+
+H1:
+
+**Veteran Life Insurance Made Simple**
+
+Suggested H2s:
+
+* Why Veterans Look Into Final Expense Coverage
+* What This Is — And What It Is Not
+* How Honor First Life Works
+* Compare Private Life Insurance Options
+* Speak With Jesse Reiter
+* Frequently Asked Questions
+
+Target keywords:
+
+* veteran life insurance
+* life insurance for veterans
+* final expense insurance for veterans
+* burial insurance for veterans
+* veteran family protection
+* private life insurance for veterans
+* mortgage protection life insurance
+* policy review for veterans
+* whole life insurance for veterans
+* term life insurance for veterans
+
+Add JSON-LD schema:
+
+* Organization
+* InsuranceAgency or FinancialService
+* Person for Jesse Reiter
+* Service
+* FAQPage
+* BreadcrumbList
+* WebSite
+
+Do not use fake ratings or fake testimonials in schema.
+
+## FAQ Section
+
+Add these FAQs.
+
+### Is Honor First Life the VA?
+
+No. Honor First Life is a private life insurance resource and is not affiliated with the VA, U.S. government, or any military branch.
+
+### Can veterans qualify for life insurance without a medical exam?
+
+Some private life insurance options may not require a traditional medical exam, but approval, pricing, and coverage depend on age, health, state, product, carrier, and underwriting.
+
+### What if I already have life insurance?
+
+Jesse can help you review what you already have and discuss whether it still fits your goals, budget, and family needs.
+
+### What information do I need to submit?
+
+The website only asks for basic contact and eligibility information. Do not submit Social Security numbers, banking information, payment information, VA claim numbers, Medicare numbers, or full medical history through the website.
+
+### What happens after I request information?
+
+Jesse may call or text you based on your preference to review your goals, answer questions, and explain private life insurance options that may be available.
+
+### Is approval guaranteed?
+
+No. Coverage is not guaranteed. Approval, coverage amount, and premium depend on the carrier, state, product, age, health, and underwriting.
+
+### Can Jesse help if I already have VA benefits?
+
+Yes. Jesse can help review private life insurance options outside of VA benefits. Honor First Life is not the VA and does not replace official VA guidance.
+
+## Pages
+
+### `/privacy-policy`
+
+Create a basic privacy policy page.
+
+Include:
+
+* What information is collected
+* How it is used
+* How users can contact Jesse
+* No selling of personal information
+* Tracking/cookies note
+* SMS/email consent note
+
+### `/terms`
+
+Create terms and disclosures.
+
+Include:
+
+* No guarantee of approval
+* Insurance availability depends on state, carrier, product, age, health, underwriting
+* Private insurance resource
+* Not affiliated with VA/government/military branches
+* No coverage created by submitting form
+* Licensed professional may contact user
+
+### `/not-affiliated-with-va`
+
+Create a plain-English page explaining:
+
+* Honor First Life is private
+* Not the VA
+* Not a government agency
+* Not a military branch
+* Can help discuss private insurance options
+* Visitors should contact the VA directly for official VA benefits questions
+
+## Anti-Spam and Security
+
+Add:
+
+* Cloudflare Turnstile or reCAPTCHA
+* Honeypot field
+* Rate limiting
+* Server-side validation
+* Duplicate lead detection by phone/email
+* HTTPS only
+* No secrets in code
+* Secrets stored in environment variables
+* No PII in console logs
+* Admin authentication
+* Strong admin password
+* Data export workflow
+* Basic deletion workflow for privacy requests
+
+## What Not To Build in Version 1
+
+Do not build:
+
+* Instant quote calculator
+* Carrier-specific quote engine
+* AI chatbot that gives insurance advice
+* Social Security collection
+* Bank information collection
+* Credit/debit card collection
+* Full medical history collection
+* VA claim number collection
+* Medicare number collection
+* Automated underwriting recommendation
+* Fake VA-benefit checker
+* Fake urgency popups
+* Carrier-logo wall without permission
+* Fake testimonials
+* Aggressive popups
+
+## Image / Graphic Placeholders
+
+Use placeholders for now.
+
+Required image areas:
+
+1. Logo
+2. Hero image or veteran/family illustration
+3. Jesse headshot
+4. Video placeholder
+5. Trust card icons
+6. Testimonial placeholders
+7. Three-step process icons
+
+## Image Generation Prompts
+
+### Logo Prompt
+
+Create a premium, trustworthy logo for a veteran-focused private life insurance brand named “Honor First Life.” The logo should feel respectful, mature, calm, and patriotic without looking like a government agency. Use deep navy, warm gold, white, and subtle muted red. Include a refined shield or protective emblem, a subtle star, and a clean “HFL” monogram option. Avoid official military seals, VA-style marks, government-looking eagles, flags used in a cliché way, or anything that looks like a federal program.
+
+### Hero Image Prompt
+
+Create a warm, realistic hero image for a veteran-focused private life insurance landing page. Show an older veteran in his late 60s sitting at a kitchen table with his spouse, calmly reviewing simple paperwork. The mood should be peaceful, respectful, family-protective, and trustworthy. Use warm natural light, navy and gold accents, no fear-based imagery, no hospital beds, no funeral imagery, no official military logos, and no government insignia.
+
+### Family Protection Graphic Prompt
+
+Create a clean website illustration showing a protective shield around an older couple and their adult children. The style should be modern but mature, with navy, gold, and soft white colors. The message should be family protection, final expense planning, and peace of mind. Avoid cartoonish style, aggressive patriotism, and government symbols.
+
+### Video Placeholder Prompt
+
+Create a clean website video thumbnail for “A Quick Message From Jesse.” Use a professional life insurance advisor setting, warm lighting, navy/gold palette, and a friendly trustworthy tone. Include a play button overlay. Do not use government or VA symbols.
+
+### Trust Section Graphic Prompt
+
+Create a refined trust-building graphic for “Honor First Life” showing four simple trust cards: Licensed Guidance, Multiple Carrier Options, No-Pressure Review, Private Veteran-Focused Support. Use clean white background, navy text, gold icon accents, and subtle red highlights. Do not use fake seals, fake ratings, or government-looking badges.
+
+## Acceptance Criteria
+
+The build is complete when:
+
+* Landing page is live in Replit preview.
+* Mobile layout works perfectly.
+* Sticky mobile CTA bar works.
+* Call button works.
+* Text button works.
+* Multi-step form works.
+* Form validates correctly.
+* Form stores leads in database.
+* Form captures UTM and click IDs.
+* Form redirects to `/thank-you`.
+* Thank-you page fires conversion events.
+* Admin can view leads.
+* Admin can update lead status.
+* Admin can add notes.
+* Admin can export CSV.
+* Email notification works.
+* SMS notification works or is stubbed with clear setup instructions.
+* CRM webhook placeholder exists.
+* Privacy, terms, and VA-disclosure pages exist.
+* No SSN, banking, payment, VA claim, or Medicare fields exist.
+* Site clearly says it is not affiliated with VA/government.
+* Form consent is logged with timestamp.
+* Anti-spam is active.
+* SEO metadata is implemented.
+* FAQ schema is implemented.
+* Logo in top-left links home.
+* `/api/healthz` returns healthy status.
+
+## Future Expansion Readiness
+
+Build the structure so we can later add separate landing pages for:
+
+* `/final-expense`
+* `/mortgage-protection`
+* `/policy-review`
+* `/whole-life`
+* `/term-life`
+* `/iul`
+* `/veteran-life-insurance`
+
+Do not build these pages now unless there is time. Build the routing structure and reusable page components so they can be added later.

@@ -1,0 +1,592 @@
+# Replit Update Prompt — HonorFirstLife Landing Page Tweaks Based on PPC Team Feedback
+
+We are updating the HonorFirstLife landing page based on PPC team recommendations.
+
+Important correction: the website/brand/domain should be **HonorFirstLife** and **HonorFirstLife.com**. Do not use any incorrect homepage or URL referenced in outside recommendation documents.
+
+The goal is still one primary PPC landing page for now, but it should be optimized more strongly for phone calls, form submissions, trust, mobile conversion, and future expansion into separate product pages.
+
+## Primary Objective
+
+Optimize the landing page to generate qualified leads for Jesse Reiter through:
+
+1. Phone calls
+2. Text messages
+3. Lead form submissions
+4. Callback requests
+
+Phone calls should now be treated as the primary conversion action, with form submissions as a secondary but still important conversion path.
+
+## Overall Landing Page Direction
+
+The page should clearly communicate:
+
+* Jesse helps veterans and families review private life insurance options.
+* This is private life insurance guidance, not VA/government coverage.
+* The visitor can call, text, or submit a short form.
+* The process is simple, respectful, and no-pressure.
+* Coverage, pricing, and approval depend on state, age, health, carrier, product, and underwriting.
+* No Social Security number, banking information, payment information, VA claim number, Medicare number, or full medical history should be collected on the landing page.
+
+## Revised Page Layout
+
+Update the landing page to follow this structure:
+
+1. Header with phone CTA
+2. Hero section with clear value proposition and form
+3. Trust badges / licensing strip
+4. Benefits section
+5. Insurance product explanation section
+6. How it works
+7. Why choose HonorFirstLife / Jesse
+8. Testimonials or testimonial placeholders
+9. FAQ
+10. Final CTA
+11. Contact information
+12. Compliance disclosures
+
+## Header Updates
+
+Header should include:
+
+* HonorFirstLife logo on the left
+* “Speak With Jesse” phone CTA on the right
+* “Check My Options” CTA
+* Mobile click-to-call icon
+* Sticky mobile bottom CTA bar
+
+Mobile sticky CTA buttons:
+
+* Call Jesse
+* Text Jesse
+* Check Options
+
+The phone CTA should be visually prominent because the PPC team’s stated objective is generating phone calls.
+
+## Hero Section Update
+
+Use this hero headline:
+
+**Veteran Life Insurance Made Simple**
+
+Subheadline:
+
+**Protect your family from funeral costs, final expenses, and leftover bills with clear, respectful guidance from a licensed life insurance professional.**
+
+Add a stronger call-focused line:
+
+**Prefer to talk? Call Jesse directly and ask your questions before filling anything out.**
+
+Primary CTA button:
+
+**Call Jesse Now**
+
+Secondary CTA button:
+
+**Check My Options**
+
+Third CTA:
+
+**Text Jesse**
+
+Hero trust line:
+
+**Private life insurance guidance. Not affiliated with the VA, U.S. government, or any military branch.**
+
+Hero micro-trust note:
+
+**No Social Security number, banking information, or payment information is collected on this website.**
+
+## Hero Form Update
+
+Keep the multi-step form, but make the first screen shorter and more conversion-friendly.
+
+Form headline:
+
+**See What Options May Fit Your Family**
+
+Subheadline:
+
+**Answer a few quick questions so Jesse knows how to help when he calls.**
+
+First visible fields should be:
+
+* First name
+* Phone number
+* State
+* Best time to contact
+* Primary interest
+
+Then continue into the full multi-step form.
+
+Make sure the form still captures all previously defined fields across the full flow:
+
+* First name
+* Last name
+* Phone
+* Email
+* State
+* ZIP
+* Veteran status
+* Branch of service
+* Who they want to protect
+* What made them look into this today
+* Product interest
+* Desired coverage range
+* Existing coverage
+* Policy review interest
+* Age range
+* Tobacco/nicotine status
+* General health range
+* Contact preference
+* Best time to contact
+* Consent
+
+## Trust Badges / Licensing Strip
+
+Add a trust strip directly below the hero.
+
+Trust badges should say:
+
+* Licensed Insurance Professional
+* Private Life Insurance Guidance
+* Secure Information
+* Privacy Protected
+* No-Pressure Review
+* Veteran-Focused Support
+
+Do not include BBB unless Jesse actually has a verified BBB profile or rating.
+
+Do not use fake seals, fake ratings, fake reviews, government-looking icons, or VA-style badges.
+
+## Benefits Section
+
+Add a section titled:
+
+**Why Veterans and Families Look Into Life Insurance**
+
+Use 4 cards:
+
+### Protect Your Family
+
+Help reduce the chance that your spouse, children, or loved ones are left with funeral costs, medical bills, or leftover expenses.
+
+### Cover Final Expenses
+
+Private life insurance may help with burial, cremation, funeral costs, and other final expenses.
+
+### Review Existing Coverage
+
+Already have a policy? Jesse can help review whether it still fits your goals, budget, and family situation.
+
+### Compare Private Options
+
+Jesse can help review options from available private carriers based on your state, age, health, goals, and budget.
+
+## Product Explanation Section
+
+Add a new section called:
+
+**Life Insurance Options Jesse Can Help You Review**
+
+This section should briefly explain the main product categories without overwhelming the visitor.
+
+### Veteran Life Insurance / Final Expense
+
+For veterans and families who want help preparing for funeral costs, final bills, and family protection.
+
+Messaging focus:
+
+* Family protection
+* Financial security
+* Veteran-focused support
+* Simple explanation
+* No-pressure guidance
+
+### Whole Life Insurance
+
+For people who want long-term protection, stable coverage, and a policy designed to last.
+
+Messaging focus:
+
+* Lifetime coverage
+* Predictable premiums
+* Long-term planning
+* Legacy protection
+* Family stability
+
+Use compliance-safe wording:
+
+**Whole life insurance may provide lifetime coverage as long as required premiums are paid and the policy remains in force.**
+
+### Indexed Universal Life / IUL
+
+For people who want to discuss life insurance with potential cash value growth and long-term planning flexibility.
+
+Messaging focus:
+
+* Protection plus cash value potential
+* Long-term financial planning
+* Flexibility
+* Educational guidance
+* Retirement-related conversations
+
+Use compliance-safe wording:
+
+**Indexed Universal Life may offer life insurance protection with cash value growth potential, subject to policy terms, caps, participation rates, fees, and other limitations. Jesse can help explain whether this type of policy may or may not fit your goals.**
+
+Do not present IUL as guaranteed investment growth.
+
+Do not call IUL an investment.
+
+Do not promise returns.
+
+### Mortgage Protection
+
+For homeowners who want to discuss coverage that may help protect their family if something happens unexpectedly.
+
+Messaging focus:
+
+* Family stays protected
+* Mortgage burden support
+* Private policy review
+* Options depend on age, health, state, carrier, and underwriting
+
+### Policy Review / Replacement
+
+For people who already have coverage but want to know whether they are overpaying, underinsured, or using the wrong type of policy.
+
+Messaging focus:
+
+* Existing coverage review
+* Compare current policy
+* See if current policy still fits
+* No pressure to replace
+
+Add disclaimer:
+
+**Do not cancel or replace an existing policy until you have reviewed your options and understand the differences, costs, risks, benefits, and approval requirements.**
+
+## How It Works Section
+
+Update the section to be more call-focused.
+
+Headline:
+
+**How the Private Review Works**
+
+Step 1:
+
+**Call, text, or submit the form**
+Choose the easiest way to reach Jesse.
+
+Step 2:
+
+**Jesse reviews your goals**
+He’ll ask what you are trying to protect, who you want to protect, and whether you already have coverage.
+
+Step 3:
+
+**Discuss realistic options**
+Options depend on age, health, state, carrier, product, and underwriting.
+
+Step 4:
+
+**Apply only if it makes sense**
+Submitting the website form does not create coverage. Coverage only begins if you apply, are approved, and make the required first premium payment.
+
+## Why Choose HonorFirstLife / Jesse
+
+Add a “Why Choose HonorFirstLife” section.
+
+Headline:
+
+**Why Speak With Jesse?**
+
+Use cards:
+
+### Licensed Guidance
+
+Speak with a licensed life insurance professional, not a generic lead vendor.
+
+### Private Carrier Options
+
+Jesse can help compare private life insurance options that may fit your situation.
+
+### Respectful, No-Pressure Conversation
+
+The goal is to help you understand your options, not pressure you into a decision.
+
+### Veteran-Focused Support
+
+The page is designed for veterans and families who want simple, direct answers.
+
+### Clear Next Steps
+
+You’ll know what happens after submitting the form or calling.
+
+### Human Follow-Up
+
+Jesse personally reviews your request and follows up by phone or text.
+
+## Testimonials Section
+
+Add testimonial placeholders, but do not present them as real testimonials.
+
+Headline:
+
+**What Families Want From This Conversation**
+
+Subheadline:
+
+**Simple answers. Clear options. No pressure.**
+
+Add 3 placeholder cards clearly marked:
+
+**Placeholder — replace with approved testimonial**
+
+Example placeholder copy:
+
+1. “Jesse helped explain the options in a way that was easy to understand.”
+2. “I wanted to make sure my family would not be left with the bill.”
+3. “I already had coverage, but wanted someone to help me review it.”
+
+Do not use fake names, fake star ratings, or fake testimonials.
+
+## Real Photos / Imagery
+
+Use real photos where available.
+
+Image strategy:
+
+* Use Jesse’s real headshot in the “Meet Jesse” section.
+* Use respectful veteran/family imagery for the hero and benefit sections.
+* Use professional retirement-focused imagery for IUL/long-term planning sections.
+* Avoid cheesy stock imagery.
+* Avoid government/military branch insignia.
+* Avoid VA-like seals.
+* Avoid fear-based funeral imagery.
+
+If real images are not available, use tasteful placeholders.
+
+## FAQ Section Update
+
+Add or update FAQs:
+
+### Is HonorFirstLife the VA?
+
+No. HonorFirstLife is a private life insurance resource and is not affiliated with the VA, U.S. government, or any military branch.
+
+### Can I call instead of filling out the form?
+
+Yes. If you prefer to talk, you can call Jesse directly using the phone button on this page.
+
+### What kind of life insurance can Jesse help with?
+
+Jesse can help review private options for final expense, whole life, term life, mortgage protection, Indexed Universal Life, and existing policy reviews.
+
+### Is approval guaranteed?
+
+No. Approval, coverage amount, premium, and product availability depend on age, health, state, carrier, product, and underwriting.
+
+### Do I need to enter my Social Security number on this website?
+
+No. Do not enter Social Security numbers, banking information, payment information, VA claim numbers, Medicare numbers, or full medical history on this website.
+
+### What happens after I submit the form?
+
+Jesse may call or text you based on your selected contact preference to review your goals and discuss what options may be available.
+
+### Can Jesse review a policy I already have?
+
+Yes. Jesse can help review an existing policy and discuss whether it still fits your goals, budget, and family needs.
+
+### Is IUL right for everyone?
+
+No. Indexed Universal Life is not right for everyone. It may offer protection with cash value growth potential, but it also includes policy terms, fees, caps, participation rates, and other limitations that should be explained before deciding.
+
+## Final CTA Section
+
+Add a strong final call-to-action section before the footer.
+
+Headline:
+
+**Would your family know what to do financially if something happened unexpectedly?**
+
+Copy:
+
+A quick private review can help you understand what options may be available and whether your current coverage is enough.
+
+CTA buttons:
+
+* Call Jesse Now
+* Check My Options
+* Text Jesse
+
+## Contact Information Section
+
+Add contact section above footer.
+
+Include:
+
+* Jesse Reiter
+* Licensed Life Insurance Professional
+* Phone
+* Email
+* Digital business card link placeholder
+* Licensed states
+* “Save Jesse’s Number” CTA
+
+## Compliance Disclosure Section
+
+Add a visible disclosure section near the bottom and in the footer.
+
+Use this disclosure:
+
+**HonorFirstLife is a private life insurance resource. Not affiliated with the VA, U.S. government, or any military branch. Product availability, coverage amounts, premiums, and approval depend on age, health, state, product, carrier, and underwriting. Submitting this form does not create coverage or guarantee approval. A licensed insurance professional may contact you to review available options. Services are available only where Jesse Reiter is properly licensed and appointed.**
+
+Add replacement disclosure:
+
+**Do not cancel, replace, or modify an existing life insurance policy until you have reviewed the costs, benefits, risks, surrender charges, waiting periods, contestability periods, and approval requirements of any new coverage.**
+
+Add IUL disclosure:
+
+**Indexed Universal Life policies are life insurance products, not direct investments. Cash value growth potential depends on policy terms, index crediting methods, caps, participation rates, fees, and other limitations. Results are not guaranteed.**
+
+## Mobile UX Requirements
+
+The page must be mobile-first.
+
+Requirements:
+
+* Sticky mobile CTA bar
+* Large phone CTA
+* Large form fields
+* Large buttons
+* Minimal typing
+* Tap-to-call
+* Tap-to-text
+* Fast load speed
+* No horizontal scrolling
+* Hero and form should be visible quickly
+* CTA buttons repeated after major sections
+* Short sections with clear headings
+* Simple form progress indicator
+
+## A/B Testing Readiness
+
+Build the page so future A/B tests are easy.
+
+Prepare page variables for:
+
+* Hero headline
+* Hero subheadline
+* CTA button text
+* Form length
+* CTA order
+* Trust badge order
+* Hero image
+* Product section order
+
+Potential CTA variants:
+
+* Call Jesse Now
+* Speak With Jesse
+* Check My Options
+* Get My Free Review
+* Request a Callback
+
+Do not implement full A/B testing engine now unless easy. Just structure components so variants can be swapped later.
+
+## Tracking Updates
+
+Because calls are a primary conversion, make sure these events exist:
+
+* `click_to_call_header`
+* `click_to_call_hero`
+* `click_to_call_sticky_mobile`
+* `click_to_call_final_cta`
+* `click_to_text`
+* `form_start`
+* `form_step_complete`
+* `form_submit`
+* `thank_you_view`
+
+Keep previous tracking requirements:
+
+* GA4
+* GTM
+* Google Ads conversion tracking
+* Google Ads phone call conversion placeholder
+* UTM capture
+* GCLID / GBRAID / WBRAID capture
+* Referrer capture
+* Device capture
+
+## Thank You Page Update
+
+Update thank-you page to support phone-call-first follow-up.
+
+Headline:
+
+**Your request was received.**
+
+Copy:
+
+Thank you. Jesse received your request and may call or text you soon based on the contact preference you selected.
+
+Callout:
+
+**Please save Jesse’s number so you recognize the call.**
+
+Buttons:
+
+* Call Jesse Now
+* Text Jesse
+* Return Home
+
+Add reminder:
+
+**HonorFirstLife is a private life insurance resource and is not affiliated with the VA, U.S. government, or any military branch.**
+
+## Keep Existing Backend Requirements
+
+Keep all existing backend, database, admin dashboard, notification, lead scoring, CRM webhook, privacy, anti-spam, security, and tracking requirements from the prior build spec.
+
+Do not remove:
+
+* Lead storage
+* Admin dashboard
+* CSV export
+* Lead status updates
+* UTM capture
+* Consent logging
+* Email/SMS notifications
+* Thank-you page
+* Privacy/terms/not-affiliated-with-VA pages
+* Health check endpoint
+* Anti-spam
+* Server-side validation
+* No collection of SSN/banking/payment/full medical info on website
+
+## Acceptance Criteria
+
+The landing page update is complete when:
+
+* Phone CTA is clearly the primary action.
+* Form remains easy and mobile-first.
+* Hero section includes value proposition and lead form.
+* Trust badges/licensing strip exists.
+* Benefits section exists.
+* Product explanation section exists for Veterans Life Insurance, Whole Life, IUL, Mortgage Protection, and Policy Review.
+* How It Works section exists.
+* Why Choose Jesse / HonorFirstLife section exists.
+* Testimonial placeholders exist and are clearly marked as placeholders.
+* FAQ section includes product and compliance FAQs.
+* Final CTA section exists.
+* Contact information section exists.
+* Footer disclosures exist.
+* Mobile sticky CTA works.
+* Call, text, and form events are tracked.
+* Thank-you page works.
+* Brand/domain are consistently shown as HonorFirstLife and HonorFirstLife.com.

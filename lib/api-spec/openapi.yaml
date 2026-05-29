@@ -10,6 +10,10 @@ servers:
 tags:
   - name: health
     description: Health operations
+  - name: leads
+    description: Public lead capture
+  - name: admin
+    description: Admin lead management
 paths:
   /healthz:
     get:
@@ -24,6 +28,274 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+  /leads:
+    post:
+      operationId: createLead
+      tags: [leads]
+      summary: Submit a new lead
+      description: Stores a lead, captures tracking data, logs consent, scores and notifies.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LeadInput"
+      responses:
+        "201":
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LeadCreateResult"
+        "400":
+          description: Validation error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+  /events:
+    post:
+      operationId: trackEvent
+      tags: [leads]
+      summary: Track a frontend analytics event
+      description: Records a lightweight client-side event (call/text clicks, form steps).
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/EventInput"
+      responses:
+        "201":
+          description: Recorded
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/EventResult"
+  /admin/login:
+    post:
+      operationId: adminLogin
+      tags: [admin]
+      summary: Admin login
+      description: Authenticates an admin and starts a session.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AdminLoginInput"
+      responses:
+        "200":
+          description: Logged in
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AdminSession"
+        "401":
+          description: Invalid credentials
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+  /admin/logout:
+    post:
+      operationId: adminLogout
+      tags: [admin]
+      summary: Admin logout
+      responses:
+        "200":
+          description: Logged out
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/OkResponse"
+  /admin/me:
+    get:
+      operationId: adminMe
+      tags: [admin]
+      summary: Current admin session
+      responses:
+        "200":
+          description: Session state
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AdminSession"
+  /admin/stats:
+    get:
+      operationId: adminStats
+      tags: [admin]
+      summary: Dashboard metrics
+      description: Summary counts for the admin dashboard.
+      responses:
+        "200":
+          description: Stats
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AdminStats"
+        "401":
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+  /admin/leads:
+    get:
+      operationId: listLeads
+      tags: [admin]
+      summary: List leads
+      parameters:
+        - name: status
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: state
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: productInterest
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: minScore
+          in: query
+          required: false
+          schema:
+            type: integer
+        - name: fromDate
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: toDate
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: search
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Lead list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Lead"
+        "401":
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+  /admin/leads/{id}:
+    get:
+      operationId: getLead
+      tags: [admin]
+      summary: Get lead detail
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Lead detail
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LeadDetail"
+        "404":
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+    patch:
+      operationId: updateLead
+      tags: [admin]
+      summary: Update lead status, notes, quality, outcome
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LeadUpdate"
+      responses:
+        "200":
+          description: Updated lead
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Lead"
+        "404":
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+    delete:
+      operationId: deleteLead
+      tags: [admin]
+      summary: Delete a lead (privacy request)
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Deleted
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/OkResponse"
+        "404":
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+  /admin/webhooks/crm-test:
+    post:
+      operationId: testCrmWebhook
+      tags: [admin]
+      summary: Test the configured CRM webhook
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CrmTestInput"
+      responses:
+        "200":
+          description: Webhook test result
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CrmTestResult"
+        "401":
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
 components:
   schemas:
     HealthStatus:
@@ -33,4 +305,337 @@ components:
           type: string
       required:
         - status
-
+    OkResponse:
+      type: object
+      properties:
+        ok:
+          type: boolean
+      required:
+        - ok
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+      required:
+        - error
+    LeadInput:
+      type: object
+      required:
+        - firstName
+        - lastName
+        - phone
+        - state
+        - consentContact
+      properties:
+        firstName:
+          type: string
+          minLength: 1
+        lastName:
+          type: string
+          minLength: 1
+        phone:
+          type: string
+          minLength: 7
+        email:
+          type: string
+        state:
+          type: string
+          minLength: 2
+        zip:
+          type: string
+          minLength: 3
+        contactPreference:
+          type: string
+        bestContactTime:
+          type: string
+        veteranStatus:
+          type: string
+        branch:
+          type: string
+        primaryGoal:
+          type: string
+        beneficiaryType:
+          type: string
+        reasonForInterest:
+          type: string
+        productInterest:
+          type: string
+        desiredCoverageRange:
+          type: string
+        existingCoverage:
+          type: string
+        wantsPolicyReview:
+          type: string
+        ageRange:
+          type: string
+        tobaccoStatus:
+          type: string
+        generalHealthRange:
+          type: string
+        comfortWithCall:
+          type: string
+        consentContact:
+          type: boolean
+        consentText:
+          type: string
+        landingPage:
+          type: string
+        referrer:
+          type: string
+        utmSource:
+          type: string
+        utmMedium:
+          type: string
+        utmCampaign:
+          type: string
+        utmContent:
+          type: string
+        utmTerm:
+          type: string
+        gclid:
+          type: string
+        gbraid:
+          type: string
+        wbraid:
+          type: string
+        fbclid:
+          type: string
+        msclkid:
+          type: string
+        deviceType:
+          type: string
+        company:
+          type: string
+          description: Honeypot field - must be empty
+    LeadCreateResult:
+      type: object
+      required:
+        - id
+        - ok
+      properties:
+        id:
+          type: integer
+        ok:
+          type: boolean
+        leadScore:
+          type: integer
+    Lead:
+      type: object
+      required:
+        - id
+        - createdAt
+        - firstName
+        - lastName
+        - phone
+        - state
+        - status
+        - leadScore
+      properties:
+        id:
+          type: integer
+        createdAt:
+          type: string
+        updatedAt:
+          type: string
+        firstName:
+          type: string
+        lastName:
+          type: string
+        phone:
+          type: string
+        email:
+          type: ["string", "null"]
+        state:
+          type: string
+        zip:
+          type: ["string", "null"]
+        ageRange:
+          type: ["string", "null"]
+        veteranStatus:
+          type: ["string", "null"]
+        branch:
+          type: ["string", "null"]
+        primaryGoal:
+          type: ["string", "null"]
+        beneficiaryType:
+          type: ["string", "null"]
+        reasonForInterest:
+          type: ["string", "null"]
+        productInterest:
+          type: ["string", "null"]
+        desiredCoverageRange:
+          type: ["string", "null"]
+        existingCoverage:
+          type: ["string", "null"]
+        wantsPolicyReview:
+          type: ["string", "null"]
+        contactPreference:
+          type: ["string", "null"]
+        bestContactTime:
+          type: ["string", "null"]
+        tobaccoStatus:
+          type: ["string", "null"]
+        generalHealthRange:
+          type: ["string", "null"]
+        comfortWithCall:
+          type: ["string", "null"]
+        consentContact:
+          type: boolean
+        consentTimestamp:
+          type: ["string", "null"]
+        utmSource:
+          type: ["string", "null"]
+        utmMedium:
+          type: ["string", "null"]
+        utmCampaign:
+          type: ["string", "null"]
+        utmContent:
+          type: ["string", "null"]
+        utmTerm:
+          type: ["string", "null"]
+        gclid:
+          type: ["string", "null"]
+        leadScore:
+          type: integer
+        status:
+          type: string
+        leadQuality:
+          type: ["string", "null"]
+        outcome:
+          type: ["string", "null"]
+        adminNotes:
+          type: ["string", "null"]
+        notificationSent:
+          type: boolean
+        crmSyncStatus:
+          type: ["string", "null"]
+    LeadDetail:
+      type: object
+      required:
+        - lead
+        - events
+      properties:
+        lead:
+          $ref: "#/components/schemas/Lead"
+        events:
+          type: array
+          items:
+            $ref: "#/components/schemas/LeadEvent"
+    LeadEvent:
+      type: object
+      required:
+        - id
+        - eventType
+        - createdAt
+      properties:
+        id:
+          type: integer
+        eventType:
+          type: string
+        eventData:
+          type: ["string", "null"]
+        createdAt:
+          type: string
+    LeadUpdate:
+      type: object
+      properties:
+        status:
+          type: string
+        adminNotes:
+          type: string
+        leadQuality:
+          type: string
+        outcome:
+          type: string
+    EventInput:
+      type: object
+      required:
+        - eventType
+      properties:
+        eventType:
+          type: string
+        leadId:
+          type: ["integer", "null"]
+        eventData:
+          type: string
+    EventResult:
+      type: object
+      required:
+        - ok
+      properties:
+        ok:
+          type: boolean
+    AdminLoginInput:
+      type: object
+      required:
+        - password
+      properties:
+        username:
+          type: string
+        password:
+          type: string
+    AdminSession:
+      type: object
+      required:
+        - authenticated
+      properties:
+        authenticated:
+          type: boolean
+    AdminStats:
+      type: object
+      required:
+        - leadsToday
+        - leadsThisWeek
+        - hotLeads
+        - asapCalls
+        - totalLeads
+        - callsClicked
+        - textsClicked
+      properties:
+        leadsToday:
+          type: integer
+        leadsThisWeek:
+          type: integer
+        hotLeads:
+          type: integer
+        asapCalls:
+          type: integer
+        totalLeads:
+          type: integer
+        callsClicked:
+          type: integer
+        textsClicked:
+          type: integer
+        statusBreakdown:
+          type: array
+          items:
+            $ref: "#/components/schemas/StatusCount"
+    StatusCount:
+      type: object
+      required:
+        - status
+        - count
+      properties:
+        status:
+          type: string
+        count:
+          type: integer
+    CrmTestInput:
+      type: object
+      required:
+        - webhookUrl
+      properties:
+        webhookUrl:
+          type: string
+    CrmTestResult:
+      type: object
+      required:
+        - ok
+      properties:
+        ok:
+          type: boolean
+        statusCode:
+          type: ["integer", "null"]
+        message:
+          type: ["string", "null"]

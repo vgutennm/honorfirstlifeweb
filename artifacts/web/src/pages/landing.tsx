@@ -11,7 +11,6 @@ import {
   messageMatch,
   whyCheckNow,
   products,
-  productsDisclaimer,
   faqs,
 } from "@/lib/site";
 import {
@@ -199,9 +198,6 @@ export default function Landing() {
               </div>
             ))}
           </div>
-          <p className="text-xs text-muted-foreground text-center mt-6 max-w-2xl mx-auto leading-relaxed">
-            {productsDisclaimer}
-          </p>
         </div>
       </section>
 

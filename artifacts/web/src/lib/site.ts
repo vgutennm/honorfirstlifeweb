@@ -38,7 +38,7 @@ export const hero = {
 // CTA labels — swap to test wording.
 export const cta = {
   getQuote: "Get My Quote",
-  callNow: "Call Jesse Now",
+  callNow: "Talk With a Licensed Agent",
   textJesse: "Text Jesse",
 };
 
@@ -137,7 +137,7 @@ export const faqs: { q: string; a: string }[] = [
   },
   {
     q: "Can I call instead of filling out the form?",
-    a: "Yes. Use the Call Jesse Now button to speak directly with Jesse.",
+    a: "Yes. Use the Talk With a Licensed Agent button to speak directly with a licensed agent.",
   },
   {
     q: "Can veterans get life insurance without a medical exam?",

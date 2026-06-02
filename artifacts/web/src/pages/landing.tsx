@@ -99,6 +99,12 @@ export default function Landing() {
         <div className="absolute inset-0 z-0">
           <img src="/hero.png" alt="Veteran and family reviewing options together" className="w-full h-full object-cover opacity-20" />
           <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/90 to-navy/40"></div>
+          <img
+            src="/hero-logo-watermark.png"
+            alt=""
+            aria-hidden="true"
+            className="pointer-events-none select-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] max-w-none sm:w-[90%] sm:max-w-4xl opacity-[0.07]"
+          />
         </div>
 
         <div className="container mx-auto px-4 relative z-10">

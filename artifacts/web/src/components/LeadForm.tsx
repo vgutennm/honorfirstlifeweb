@@ -18,7 +18,7 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useTrack } from "@/hooks/use-track";
-import { site, formDisclaimer } from "@/lib/site";
+import { site } from "@/lib/site";
 import { ArrowRight, ArrowLeft, Loader2, ShieldCheck } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -296,8 +296,6 @@ export function LeadForm() {
                     </FormItem>
                   )} />
                 </div>
-
-                <p className="text-xs text-muted-foreground leading-relaxed">{formDisclaimer}</p>
               </div>
             )}
 

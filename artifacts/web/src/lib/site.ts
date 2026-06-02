@@ -186,7 +186,3 @@ export const disclosures = {
   replacement:
     "Do not cancel, replace, or modify an existing life insurance policy until you understand the costs, benefits, risks, surrender charges, waiting periods, contestability periods, and approval requirements of any new coverage.",
 };
-
-// Form disclaimer shown directly under the lead form.
-export const formDisclaimer =
-  "Do not enter Social Security numbers, banking information, payment information, VA claim numbers, Medicare numbers, or full medical history on this website.";

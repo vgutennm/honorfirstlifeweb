@@ -253,7 +253,7 @@ export function LeadForm() {
                       <FormLabel>State *</FormLabel>
                       <Select onValueChange={field.onChange} value={field.value}>
                         <FormControl><SelectTrigger><SelectValue placeholder="Select state" /></SelectTrigger></FormControl>
-                        <SelectContent>{US_STATES.map((s) => <SelectItem key={s} value={s}>{s}</SelectItem>)}</SelectContent>
+                        <SelectContent className="max-h-60">{US_STATES.map((s) => <SelectItem key={s} value={s}>{s}</SelectItem>)}</SelectContent>
                       </Select>
                       <FormMessage />
                     </FormItem>

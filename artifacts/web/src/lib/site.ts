@@ -32,7 +32,7 @@ export const hero = {
   trustLine:
     "Private life insurance guidance. Not affiliated with the VA, U.S. government, or any military branch.",
   phoneLinePrefix: "Talk to a licensed agent now:",
-  microTrust: "No obligation. No payment information collected on this website.",
+  microTrust: "No obligation. No payment information collected on this website. We do not sell your information to third parties.",
 };
 
 // CTA labels — swap to test wording.

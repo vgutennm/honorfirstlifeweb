@@ -41,10 +41,6 @@ export function CarrierLogoStrip() {
             />
           )}
         </div>
-
-        <p className="text-xs text-muted-foreground text-center mt-6 max-w-3xl mx-auto leading-relaxed">
-          {carriers.compliance}
-        </p>
       </div>
     </section>
   );

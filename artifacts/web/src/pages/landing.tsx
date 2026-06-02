@@ -12,7 +12,6 @@ import {
   products,
   productsDisclaimer,
   carriers,
-  credibility,
   testimonials,
   faqs,
   disclosures,
@@ -29,7 +28,6 @@ import {
   MessageSquare,
   Mail,
   ArrowRight,
-  IdCard,
   Clock,
   Check,
 } from "lucide-react";
@@ -164,34 +162,6 @@ export default function Landing() {
                 <p className="text-sm text-muted-foreground leading-relaxed">{m.body}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 3. Speak with Jesse — compact credibility */}
-      <section className="py-14 lg:py-16 bg-softgray">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden grid grid-cols-1 sm:grid-cols-3">
-            <div className="relative aspect-square sm:aspect-auto sm:h-auto sm:min-h-[12rem]">
-              <img src={site.agent.headshot} alt={site.agent.name} className="w-full h-full object-cover object-center" />
-            </div>
-            <div className="p-6 lg:p-8 sm:col-span-2">
-              <h2 className="text-2xl font-serif font-bold text-navy mb-1">{credibility.title}</h2>
-              <p className="text-sm font-medium text-trustblue mb-3">{site.agent.title}</p>
-              <p className="text-muted-foreground leading-relaxed mb-4">{credibility.body}</p>
-              <div className="text-sm text-navy space-y-1 mb-5">
-                <p><span className="text-muted-foreground">NPN:</span> {site.agent.npn}</p>
-                <p><span className="text-muted-foreground">Licensed in:</span> {site.agent.licensedScope}</p>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <a href={`tel:${site.phoneTel}`} onClick={() => track("click_call_credibility")} className="inline-flex items-center justify-center gap-2 bg-secondary text-secondary-foreground hover:bg-secondary/90 px-5 py-2.5 rounded-md font-bold text-sm transition-colors">
-                  <Phone className="h-4 w-4" /> {site.phoneDisplay}
-                </a>
-                <a href={site.agent.businessCardUrl} className="inline-flex items-center justify-center gap-2 text-trustblue hover:text-navy font-medium text-sm">
-                  <IdCard className="h-4 w-4" /> Digital business card
-                </a>
-              </div>
-            </div>
           </div>
         </div>
       </section>

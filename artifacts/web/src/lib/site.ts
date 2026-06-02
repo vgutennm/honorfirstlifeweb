@@ -18,6 +18,7 @@ export const site = {
     name: "Jesse Reiter",
     title: "Licensed Life Insurance Professional",
     npn: "[Placeholder NPN]",
+    licensedScope: "all 50 states",
     licensedStates: ["NJ", "FL", "IN", "MS", "OH", "OR", "WA", "CA", "TN", "VA"],
     headshot: "/jesse.jpg",
     businessCardUrl: "#", // Placeholder digital business card link

@@ -181,7 +181,7 @@ export default function Landing() {
               <p className="text-muted-foreground leading-relaxed mb-4">{credibility.body}</p>
               <div className="text-sm text-navy space-y-1 mb-5">
                 <p><span className="text-muted-foreground">NPN:</span> {site.agent.npn}</p>
-                <p><span className="text-muted-foreground">Licensed in:</span> {site.agent.licensedStates.join(", ")}</p>
+                <p><span className="text-muted-foreground">Licensed in:</span> {site.agent.licensedScope}</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3">
                 <a href={`tel:${site.phoneTel}`} onClick={() => track("click_call_credibility")} className="inline-flex items-center justify-center gap-2 bg-secondary text-secondary-foreground hover:bg-secondary/90 px-5 py-2.5 rounded-md font-bold text-sm transition-colors">

@@ -39,7 +39,7 @@ export default function PrivacyPolicy() {
 
           <h2>6. Contact Us</h2>
           <p>If you have questions about this Privacy Policy, please contact us at:</p>
-          <p>Email: insuredbyjessereiter@gmail.com<br/>Phone: (800) 555-0199</p>
+          <p>Email: Honorfirstlife@gmail.com<br/>Phone: (800) 555-0199</p>
         </div>
       </div>
     </PublicLayout>

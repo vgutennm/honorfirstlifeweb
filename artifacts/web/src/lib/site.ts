@@ -13,7 +13,7 @@ export const site = {
   phoneDisplay: "(551) 265-8328",
   phoneTel: "1-551-265-8328",
   phoneSms: "1-551-265-8328",
-  email: "insuredbyjessereiter@gmail.com",
+  email: "Honorfirstlife@gmail.com",
   agent: {
     name: "Licensed Agent",
     title: "Licensed Life Insurance Professional",

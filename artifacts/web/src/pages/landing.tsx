@@ -210,7 +210,7 @@ export default function Landing() {
       <section className="py-14 lg:py-16 bg-softgray">
         <div className="container mx-auto px-4 max-w-5xl">
           <h2 className="text-2xl md:text-3xl font-serif font-bold text-navy text-center mb-10">
-            Options Jesse Can Help You Review
+            Options Honor First Life Can Help You Review
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {products.map((p) => (

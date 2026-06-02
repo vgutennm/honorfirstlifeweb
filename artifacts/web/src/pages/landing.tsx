@@ -12,7 +12,6 @@ import {
   whyCheckNow,
   products,
   productsDisclaimer,
-  testimonials,
   faqs,
 } from "@/lib/site";
 import {
@@ -206,15 +205,7 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* 6. Testimonials placeholder */}
-      <section className="py-14 lg:py-16 bg-softgray">
-        <div className="container mx-auto px-4 max-w-2xl text-center">
-          <h2 className="text-2xl md:text-3xl font-serif font-bold text-navy mb-3">{testimonials.title}</h2>
-          <p className="text-muted-foreground leading-relaxed">{testimonials.body}</p>
-        </div>
-      </section>
-
-      {/* 7. FAQ — short and conversion-focused */}
+      {/* 6. FAQ — short and conversion-focused */}
       <section className="py-14 lg:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-3xl">
           <h2 className="text-2xl md:text-3xl font-serif font-bold text-navy text-center mb-10">

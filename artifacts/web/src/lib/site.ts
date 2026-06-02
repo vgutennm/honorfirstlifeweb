@@ -10,9 +10,9 @@
 export const site = {
   brand: "HonorFirstLife",
   domain: "HonorFirstLife.com",
-  phoneDisplay: "(800) 555-0199",
-  phoneTel: "1-800-555-0199",
-  phoneSms: "1-800-555-0199",
+  phoneDisplay: "(551) 265-8328",
+  phoneTel: "1-551-265-8328",
+  phoneSms: "1-551-265-8328",
   email: "info@honorfirstlife.com",
   agent: {
     name: "Licensed Agent",

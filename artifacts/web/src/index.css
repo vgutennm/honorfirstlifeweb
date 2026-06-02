@@ -52,7 +52,9 @@
   --color-sidebar-ring: hsl(var(--sidebar-ring));
 
   --color-navy: #0B1F3A;
-  --color-gold: #C8A24A;
+  /* Silver (metallic) — kept under the `gold` token name so existing utility
+     classes (text-gold, bg-gold, etc.) render silver across the site. */
+  --color-gold: #C2C8D0;
   --color-trustblue: #174EA6;
   --color-softgray: #F5F7FA;
   --color-mutedred: #B3261E;
@@ -102,8 +104,8 @@
   --primary: 217 76% 37%;
   --primary-foreground: 0 0% 100%;
 
-  /* Warm Gold */
-  --secondary: 42 54% 54%;
+  /* Silver */
+  --secondary: 214 14% 79%;
   --secondary-foreground: 215 68% 14%;
 
   --muted: 214 32% 91%;
@@ -136,7 +138,7 @@
   --card-border: 215 25% 20%;
   --primary: 217 76% 50%;
   --primary-foreground: 0 0% 100%;
-  --secondary: 42 54% 44%;
+  --secondary: 214 12% 64%;
   --secondary-foreground: 215 68% 10%;
   --muted: 215 25% 20%;
   --muted-foreground: 214 32% 70%;

@@ -17,7 +17,6 @@ export const site = {
   agent: {
     name: "Licensed Agent",
     title: "Licensed Life Insurance Professional",
-    npn: "[Placeholder NPN]",
     licensedScope: "all 50 states",
     licensedStates: ["NJ", "FL", "IN", "MS", "OH", "OR", "WA", "CA", "TN", "VA"],
     headshot: "/jesse.jpg",

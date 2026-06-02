@@ -97,8 +97,7 @@ export function PublicLayout({ children }: { children: React.ReactNode }) {
               <h3 className="font-semibold text-lg mb-4 font-serif">Licensing</h3>
               <p className="text-white/80 text-sm leading-relaxed">
                 Services are available only where the agent is properly licensed and appointed.<br /><br />
-                Licensed in: {site.agent.licensedScope}<br />
-                NPN: {site.agent.npn}
+                Licensed in: {site.agent.licensedScope}
               </p>
             </div>
           </div>

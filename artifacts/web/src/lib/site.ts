@@ -19,7 +19,7 @@ export const site = {
     title: "Licensed Life Insurance Professional",
     npn: "[Placeholder NPN]",
     licensedStates: ["NJ", "FL", "IN", "MS", "OH", "OR", "WA", "CA", "TN", "VA"],
-    headshot: "/jesse.png",
+    headshot: "/jesse.jpg",
     businessCardUrl: "#", // Placeholder digital business card link
   },
 };

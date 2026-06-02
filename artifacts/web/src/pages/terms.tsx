@@ -35,7 +35,7 @@ export default function Terms() {
           <p>To the fullest extent permitted by law, HonorFirstLife and its affiliates shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or relating to your use of the website or our services.</p>
 
           <h2>7. Contact Information</h2>
-          <p>If you have any questions about these Terms, please contact us at info@honorfirstlife.com.</p>
+          <p>If you have any questions about these Terms, please contact us at insuredbyjessereiter@gmail.com.</p>
         </div>
       </div>
     </PublicLayout>

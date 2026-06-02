@@ -1,5 +1,6 @@
 import { PublicLayout } from "@/components/layout/PublicLayout";
 import { LeadForm } from "@/components/LeadForm";
+import { CarrierLogoStrip } from "@/components/CarrierLogoStrip";
 import { useSeo } from "@/lib/seo";
 import { useTrack } from "@/hooks/use-track";
 import {
@@ -11,7 +12,6 @@ import {
   whyCheckNow,
   products,
   productsDisclaimer,
-  carriers,
   testimonials,
   faqs,
   disclosures,
@@ -152,7 +152,10 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* 2. Message match — mirrors likely PPC ad language */}
+      {/* 2. Carrier options logo strip */}
+      <CarrierLogoStrip />
+
+      {/* 3. Message match — mirrors likely PPC ad language */}
       <section className="bg-white py-12 lg:py-14 border-b">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -205,14 +208,7 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* 6. Carrier options (text only — no logos unless permission is confirmed) */}
-      <section className="py-10 bg-white border-y border-gray-100">
-        <div className="container mx-auto px-4 max-w-3xl text-center">
-          <p className="text-sm text-muted-foreground leading-relaxed">{carriers.intro}</p>
-        </div>
-      </section>
-
-      {/* 7. Testimonials placeholder */}
+      {/* 6. Testimonials placeholder */}
       <section className="py-14 lg:py-16 bg-softgray">
         <div className="container mx-auto px-4 max-w-2xl text-center">
           <h2 className="text-2xl md:text-3xl font-serif font-bold text-navy mb-3">{testimonials.title}</h2>
@@ -220,7 +216,7 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* 8. FAQ — short and conversion-focused */}
+      {/* 7. FAQ — short and conversion-focused */}
       <section className="py-14 lg:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-3xl">
           <h2 className="text-2xl md:text-3xl font-serif font-bold text-navy text-center mb-10">
@@ -237,7 +233,7 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* 9. Final CTA */}
+      {/* 8. Final CTA */}
       <section className="py-14 lg:py-16 bg-navy text-white">
         <div className="container mx-auto px-4 max-w-3xl text-center">
           <h2 className="text-2xl md:text-3xl font-serif font-bold mb-4 leading-tight">
@@ -260,7 +256,7 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* 10. Compliance disclosures */}
+      {/* 9. Compliance disclosures */}
       <section className="py-12 bg-white border-t border-gray-100">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="flex items-start gap-3 mb-6">

@@ -111,11 +111,32 @@ export const products: { title: string; body: string }[] = [
 export const productsDisclaimer =
   "Product availability, features, costs, and approval depend on the carrier, state, product, age, health, and underwriting.";
 
-// Carrier options text row. Logos are intentionally omitted unless written
-// permission to display them is confirmed.
+// Carrier logo strip. Shows the combined carrier image for now; individual logo
+// tiles can be swapped in later by populating `logos` with files in /public/carriers/.
 export const carriers = {
-  intro:
-    "Carrier options may include companies such as Mutual of Omaha, Americo, Transamerica, Aetna, Foresters Financial, Corebridge Financial, and others.",
+  heading: "Carrier Options a Licensed Agent Can Help You Review",
+  subheading:
+    "A licensed agent can help compare private life insurance options from multiple carriers. Product availability, pricing, and approval depend on age, health, state, carrier, product, and underwriting.",
+  combinedImage: "/carriers/all-carriers.jpg",
+  combinedImageAlt:
+    "Life insurance carrier options including Americo, Aetna, AIG, Transamerica, Mutual of Omaha, Foresters Financial, and others",
+  compliance:
+    "Carrier availability varies by state, product, eligibility, and underwriting. Logos and names are shown only to represent potential private carrier options and do not imply approval, endorsement, or guaranteed coverage.",
+  // Future: when individual logo files are confirmed for /public/carriers/, add
+  // entries here ({ name, src }) and the strip renders clean logo tiles instead
+  // of the combined image.
+  logos: [] as { name: string; src: string }[],
+  // Reference list of potential carriers for future individual-tile rendering.
+  names: [
+    "Americo", "Aetna", "AIG", "Global Atlantic Financial Group",
+    "National Life Group", "Gerber Life", "Transamerica", "F&G",
+    "Oxford Life Insurance Company", "Royal Neighbors of America",
+    "Athene Annuity", "Foresters Financial", "Mutual of Omaha",
+    "John Hancock", "Vitality", "Columbian Financial Group",
+    "Prosperity Life Group", "North American",
+    "American-Amicable Group of Companies", "ReliaShield",
+    "Guardian Wealth Strategies",
+  ],
 };
 
 // Compact credibility block for the agent.

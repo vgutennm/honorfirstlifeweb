@@ -173,7 +173,7 @@ export default function Landing() {
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden grid grid-cols-1 sm:grid-cols-3">
             <div className="relative h-48 sm:h-auto min-h-[12rem]">
-              <img src={site.agent.headshot} alt={site.agent.name} className="w-full h-full object-cover" />
+              <img src={site.agent.headshot} alt={site.agent.name} className="w-full h-full object-cover object-top" />
             </div>
             <div className="p-6 lg:p-8 sm:col-span-2">
               <h2 className="text-2xl font-serif font-bold text-navy mb-1">{credibility.title}</h2>

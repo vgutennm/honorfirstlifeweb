@@ -19,9 +19,8 @@ export function PublicLayout({ children }: { children: React.ReactNode }) {
     <div className="min-h-[100dvh] flex flex-col bg-softgray">
       <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between gap-3">
-          <Link href="/" className="flex items-center gap-2 shrink-0">
-            <img src="/logo.png" alt={site.brand} className="h-8 w-auto object-contain" />
-            <span className="font-serif font-bold text-navy hidden sm:inline-block text-xl">{site.brand}</span>
+          <Link href="/" className="flex items-center shrink-0" aria-label={site.brand}>
+            <img src="/honor-first-logo.png" alt={site.brand} className="h-11 md:h-12 w-auto object-contain" />
           </Link>
 
           <div className="flex items-center gap-2 sm:gap-4">
@@ -65,9 +64,8 @@ export function PublicLayout({ children }: { children: React.ReactNode }) {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div className="col-span-1 md:col-span-2">
-              <Link href="/" className="flex items-center gap-2 mb-4">
-                <img src="/logo.png" alt={site.brand} className="h-8 w-auto object-contain brightness-0 invert" />
-                <span className="font-serif font-bold text-xl">{site.brand}</span>
+              <Link href="/" className="inline-flex bg-white rounded-lg p-3 mb-4" aria-label={site.brand}>
+                <img src="/honor-first-logo-wide.jpg" alt={site.brand} className="h-14 w-auto object-contain" />
               </Link>
               <p className="text-white/80 text-sm mb-4 max-w-sm">
                 Private life insurance guidance for veterans and their families.

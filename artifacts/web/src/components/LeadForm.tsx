@@ -166,7 +166,7 @@ export function LeadForm() {
         </div>
       </div>
 
-      <div className="p-6 md:p-8">
+      <div className="p-6 md:p-8 text-navy">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
             {/* Honeypot */}

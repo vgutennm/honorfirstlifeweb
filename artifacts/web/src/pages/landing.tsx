@@ -14,12 +14,10 @@ import {
   productsDisclaimer,
   testimonials,
   faqs,
-  disclosures,
 } from "@/lib/site";
 import {
   Shield,
   ShieldCheck,
-  ShieldAlert,
   Lock,
   FileCheck,
   Building2,
@@ -256,20 +254,6 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* 9. Compliance disclosures */}
-      <section className="py-12 bg-white border-t border-gray-100">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="flex items-start gap-3 mb-6">
-            <ShieldAlert className="h-6 w-6 shrink-0 text-gold" />
-            <h2 className="text-xl font-serif font-bold text-navy">Important Disclosures</h2>
-          </div>
-          <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
-            <p>{disclosures.main}</p>
-            <p>{disclosures.iul}</p>
-            <p>{disclosures.replacement}</p>
-          </div>
-        </div>
-      </section>
     </PublicLayout>
   );
 }

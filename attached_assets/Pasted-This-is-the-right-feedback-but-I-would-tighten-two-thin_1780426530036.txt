@@ -1,0 +1,552 @@
+This is the right feedback, but I would tighten two things before giving it to Replit:
+
+First, do **not** say “Veterans qualify for special programs” unless Jesse confirms the exact compliant meaning. That can sound like a VA or government benefit. Use **“veteran-focused private life insurance options”** instead.
+
+Second, “secure and encrypted application” should only be used if the site actually uses HTTPS and secure handling. Use **“secure form”** or **“secure information request”** unless there is a true application workflow.
+
+Here is the Replit update prompt:
+
+# Replit Update Prompt for HonorFirstLife PPC Landing Page
+
+Update the HonorFirstLife.com landing page to become a tighter, faster, higher-converting PPC lead funnel for veteran life insurance.
+
+This update should override any previous version that made the page feel like a general company website, educational website, or broad brand site. This page is for cold PPC traffic. The goal is not to educate first. The goal is to create instant trust, make the offer obvious, and get the visitor to request a quote or call Jesse.
+
+The page must still remain compliant, truthful, and clear that HonorFirstLife is private and not affiliated with the VA, U.S. government, or any military branch.
+
+## Primary Conversion Strategy
+
+The landing page must do three things within the first 3 seconds:
+
+1. Establish trust
+2. Make the offer clear
+3. Give one obvious action
+
+Primary CTA:
+
+**Get My Quote**
+
+Secondary CTA:
+
+**Call Jesse Now**
+
+Do not use multiple competing CTAs above the fold. Remove or de-emphasize CTAs like Learn More, About Us, Read More, Blog, Services, or generic navigation links.
+
+## Above the Fold Redesign
+
+Replace the current hero with a direct PPC-style hero.
+
+Use this headline:
+
+**Compare Veteran Life Insurance Rates in Minutes**
+
+Use this subheadline:
+
+**Final expense, term life, whole life, and no-medical-exam options may be available depending on your age, health, state, carrier, and underwriting.**
+
+Use this trust line directly under the subheadline:
+
+**Private life insurance guidance. Not affiliated with the VA, U.S. government, or any military branch.**
+
+Primary button:
+
+**Get My Quote**
+
+Secondary button:
+
+**Call Jesse Now**
+
+Add phone number visibly near the top:
+
+**Talk to a licensed agent now: [JESSE PHONE NUMBER]**
+
+Add microcopy near the CTA:
+
+**No obligation. No payment information collected on this website.**
+
+## Trust Stack Above the Form
+
+Add a visible trust stack above or beside the form, above the fold.
+
+Use these trust badges:
+
+* Licensed Insurance Professional
+* No Obligation Quote
+* Secure Information Request
+* Private Carrier Options
+* Veteran-Focused Guidance
+* No VA or Government Affiliation
+
+If Jesse has approval to use carrier names or logos, add a simple row:
+
+**Carrier options may include companies such as Mutual of Omaha, Americo, Transamerica, Aetna, Foresters Financial, Corebridge Financial, and others.**
+
+If logo permission is not confirmed, do not show carrier logos. Use text only or generic placeholder cards.
+
+Do not say “top rated carriers” unless Jesse confirms the exact compliant wording.
+
+Do not include BBB unless Jesse has a verified BBB profile or rating.
+
+## Form Simplification
+
+The current form should be simplified for PPC conversion.
+
+The first form experience must only ask the minimum needed to start.
+
+Use a two-step form.
+
+### Step 1
+
+Title:
+
+**Start With a Quick Quote Check**
+
+Fields:
+
+* Age Range
+* Tobacco Use
+* Coverage Amount
+
+Options:
+
+Age Range:
+
+* Under 40
+* 40 to 49
+* 50 to 59
+* 60 to 69
+* 70 to 79
+* 80 plus
+
+Tobacco Use:
+
+* No
+* Yes
+* Prefer to discuss
+
+Coverage Amount:
+
+* $5,000 to $10,000
+* $10,000 to $25,000
+* $25,000 to $50,000
+* $50,000 plus
+* Not sure
+
+Button:
+
+**Continue**
+
+### Step 2
+
+Title:
+
+**Where Should Jesse Send Your Options?**
+
+Fields:
+
+* First Name
+* Last Name
+* Phone
+* Email
+* State
+* Best Time to Contact
+
+Best Time to Contact:
+
+* ASAP
+* Morning
+* Afternoon
+* Evening
+
+Button:
+
+**Get My Quote**
+
+Required consent checkbox:
+
+**By submitting this form, I agree that HonorFirstLife / Jesse Reiter may contact me by phone, text, or email about my request. Message and data rates may apply. I understand this is a private insurance inquiry and not a VA or government program. I can opt out of texts by replying STOP.**
+
+Add small disclaimer under the form:
+
+**Do not enter Social Security numbers, banking information, payment information, VA claim numbers, Medicare numbers, or full medical history on this website.**
+
+## Remove Friction
+
+Do not ask these questions in the first PPC form:
+
+* Branch of service
+* Beneficiary name
+* Full health history
+* Income
+* Marital status
+* Address
+* Existing policy details
+* Long product explanations
+* Detailed notes
+
+These can be asked by Jesse on the follow-up call or in a later CRM workflow.
+
+The website should still be technically able to support these fields later, but they should not appear in the first PPC form unless explicitly enabled.
+
+## Hero Layout
+
+Desktop:
+
+Left side:
+
+* Headline
+* Subheadline
+* Trust line
+* CTA buttons
+* Phone number
+* Trust badges
+
+Right side:
+
+* Two-step quote form
+
+Mobile:
+
+Order:
+
+1. Headline
+2. Subheadline
+3. Get My Quote button
+4. Call Jesse Now button
+5. Trust badges
+6. Form
+
+The CTA and phone button must be visible without excessive scrolling on mobile.
+
+## Sticky Mobile CTA
+
+Add a sticky bottom CTA bar on mobile.
+
+Buttons:
+
+* Get Quote
+* Call Now
+
+Do not include more than two buttons on the sticky mobile bar.
+
+The sticky CTA should not cover form submit buttons.
+
+Track these clicks separately:
+
+* `click_get_quote_sticky_mobile`
+* `click_call_now_sticky_mobile`
+
+## Reduce Brand Heavy Sections
+
+Move founder story, long mission statements, and general “About Jesse” content below the main conversion sections.
+
+Do not remove Jesse credibility completely. Instead, compress it.
+
+Use this short credibility block below the first conversion section:
+
+**Speak With Jesse Reiter**
+
+**Jesse is a licensed life insurance professional who helps veterans and families review private life insurance options. The goal is simple: clear answers, realistic options, and no-pressure guidance.**
+
+Add:
+
+* Jesse headshot placeholder
+* License/NPN placeholder
+* Licensed states placeholder
+* Phone number
+* Digital business card link placeholder
+
+Keep this section compact.
+
+## Urgency and Reason to Act Now
+
+Add urgency without hype or false scarcity.
+
+Use these urgency blocks:
+
+**Why check now?**
+
+* Life insurance rates generally increase with age.
+* Health changes can affect what options may be available.
+* Carrier options, pricing, and approval rules can change.
+* A quick review can help you understand what may fit before waiting longer.
+
+Do not say:
+
+* Quotes expire daily
+* Special veteran government program
+* Guaranteed veteran benefits
+* Limited time
+* Act now before it is too late
+
+## Message Match for PPC
+
+Make the landing page copy match likely ad language.
+
+Add small message blocks for:
+
+### Veteran Life Insurance Quotes
+
+Private life insurance options for veterans and families who want clear guidance and a simple next step.
+
+### Final Expense Coverage
+
+Options may help with funeral, cremation, burial, medical bills, or other final expenses.
+
+### No Medical Exam Options
+
+Some products may not require a traditional medical exam. Approval still depends on age, health, state, carrier, product, and underwriting.
+
+### Compare Private Carrier Options
+
+Jesse can help review options from available private carriers instead of forcing you into one company’s product.
+
+## Product Sections Should Be Short
+
+Keep product information brief and below the first form.
+
+Do not make the page read like an educational article.
+
+Add a compact section:
+
+**Options Jesse Can Help You Review**
+
+Cards:
+
+1. **Final Expense**
+   Help prepare for funeral, cremation, burial, and final bills.
+
+2. **Term Life**
+   Temporary coverage options for family, income, or mortgage protection needs.
+
+3. **Whole Life**
+   Permanent life insurance designed to stay in force as long as required premiums are paid and the policy remains active.
+
+4. **Indexed Universal Life**
+   Life insurance with cash value growth potential, subject to policy terms, fees, caps, participation rates, and other limitations.
+
+5. **Policy Review**
+   Already have coverage? Jesse can help review whether it still fits your goals.
+
+Add disclaimer under cards:
+
+**Product availability, features, costs, and approval depend on the carrier, state, product, age, health, and underwriting.**
+
+## Visual Credibility Cues
+
+Add visual elements that increase trust quickly:
+
+* Shield/protection motif
+* Older veteran and family imagery
+* Clean insurance-style card design
+* Secure form icon
+* Phone icon near Jesse’s phone number
+* Licensed agent badge style
+* Carrier options text row if approved
+
+Avoid:
+
+* Fake government seals
+* VA-style branding
+* Military branch logos
+* Overly corporate stock photos
+* Aggressive red warning visuals
+* Fear-based funeral imagery
+
+## Navigation Simplification
+
+For this PPC landing page, simplify navigation.
+
+Desktop header should include only:
+
+* HonorFirstLife logo
+* Phone number
+* Get My Quote button
+
+Optional footer links only:
+
+* Privacy Policy
+* Terms
+* Not Affiliated With VA
+* Contact
+
+Do not add blog, about, services, or dropdown navigation to the landing page header.
+
+## Call Tracking and Event Tracking
+
+Update tracking so calls are treated as primary conversions.
+
+Track:
+
+* `click_get_quote_hero`
+* `click_get_quote_form`
+* `click_get_quote_sticky_mobile`
+* `click_call_header`
+* `click_call_hero`
+* `click_call_sticky_mobile`
+* `form_start`
+* `form_step_1_complete`
+* `form_submit`
+* `thank_you_view`
+
+Continue capturing:
+
+* UTM source
+* UTM medium
+* UTM campaign
+* UTM content
+* UTM term
+* GCLID
+* GBRAID
+* WBRAID
+* FBCLID
+* MSCLKID
+* Referrer
+* Landing page URL
+* Device
+* Timestamp
+
+## Thank You Page Update
+
+Update the thank-you page to reinforce fast follow-up and phone conversion.
+
+Headline:
+
+**Your quote request was received.**
+
+Copy:
+
+**Jesse received your request and may call or text you soon. Please save his number so you recognize the call.**
+
+Buttons:
+
+* Call Jesse Now
+* Text Jesse
+
+Add:
+
+**Private life insurance guidance. Not affiliated with the VA, U.S. government, or any military branch.**
+
+Fire tracking:
+
+* `thank_you_view`
+* `lead_submit`
+* Google Ads form conversion placeholder
+* GA4 lead_submit event
+
+## Compliance Disclosures
+
+Keep disclosures visible in the footer and near the form.
+
+Footer disclosure:
+
+**HonorFirstLife is a private life insurance resource. Not affiliated with the VA, U.S. government, or any military branch. Product availability, coverage amounts, premiums, and approval depend on age, health, state, product, carrier, and underwriting. Submitting this form does not create coverage or guarantee approval. A licensed insurance professional may contact you to review available options. Services are available only where Jesse Reiter is properly licensed and appointed.**
+
+IUL disclosure:
+
+**Indexed Universal Life policies are life insurance products, not direct investments. Cash value growth potential depends on policy terms, index crediting methods, caps, participation rates, fees, and other limitations. Results are not guaranteed.**
+
+Replacement disclosure:
+
+**Do not cancel, replace, or modify an existing life insurance policy until you understand the costs, benefits, risks, surrender charges, waiting periods, contestability periods, and approval requirements of any new coverage.**
+
+## What To Remove or De Emphasize
+
+Remove from top of page:
+
+* Long founder story
+* Long mission statement
+* Educational sections before the form
+* Multiple CTAs
+* Blog links
+* Long navigation
+* Complex product explanations
+* Multi-step form with too many early fields
+
+Keep below fold only:
+
+* Jesse credibility
+* Product details
+* FAQ
+* Compliance
+* Testimonials
+
+## Testimonials
+
+If testimonials are not real and approved, keep placeholders clearly marked.
+
+Do not show fake names, fake reviews, fake star ratings, or fake claims.
+
+Section title:
+
+**Real Client Feedback Coming Soon**
+
+Temporary copy:
+
+**Jesse may add approved client feedback here once available. For now, you can call directly and ask your questions before deciding whether to move forward.**
+
+## FAQ Update
+
+Keep FAQ short and conversion-focused.
+
+FAQs:
+
+### Is HonorFirstLife part of the VA?
+
+No. HonorFirstLife is a private life insurance resource and is not affiliated with the VA, U.S. government, or any military branch.
+
+### Can I call instead of filling out the form?
+
+Yes. Use the Call Jesse Now button to speak directly with Jesse.
+
+### Can veterans get life insurance without a medical exam?
+
+Some private products may not require a traditional medical exam. Approval, pricing, and coverage depend on age, health, state, product, carrier, and underwriting.
+
+### Is approval guaranteed?
+
+No. Coverage is not guaranteed.
+
+### What happens after I submit the form?
+
+Jesse may call or text you to review your request and discuss what options may be available.
+
+### Do I need to enter my Social Security number here?
+
+No. Do not enter Social Security numbers, banking information, payment information, VA claim numbers, Medicare numbers, or full medical history on this website.
+
+## Future Funnel Readiness
+
+Structure the code so we can later create separate PPC landing pages for:
+
+* Final expense veterans
+* No medical exam life insurance
+* Burial insurance for veterans
+* Term life for veterans
+* Mortgage protection
+* IUL
+
+Do not build these pages now unless requested. For now, make the main page fast, focused, and PPC-ready.
+
+## Acceptance Criteria
+
+This update is complete when:
+
+* The above-the-fold section has one clear offer.
+* The primary CTA is Get My Quote.
+* The secondary CTA is Call Jesse Now.
+* Phone number is visible at the top.
+* Trust stack appears above the form.
+* First form step has only Age Range, Tobacco Use, and Coverage Amount.
+* Second form step has contact details only.
+* No long educational content appears before the first form.
+* Mobile CTA is sticky and simple.
+* Navigation is minimal.
+* Call events are tracked as primary conversion events.
+* Form submission redirects to thank-you page.
+* Thank-you page tells the user to save Jesse’s number.
+* Compliance disclaimers remain visible.
+* The site consistently uses HonorFirstLife and HonorFirstLife.com.
+* The page feels like a PPC conversion funnel, not a general company website.
+
+I would use this as the **latest override prompt** in Replit. The main shift is: less “website,” more “quote funnel.”

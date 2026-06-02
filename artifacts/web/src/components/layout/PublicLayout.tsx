@@ -25,34 +25,32 @@ export function PublicLayout({ children }: { children: React.ReactNode }) {
           </Link>
 
           <div className="flex items-center gap-2 sm:gap-4">
-            {/* Mobile click-to-call icon */}
+            {/* Click-to-call — calls are a primary conversion */}
             <a
               href={`tel:${site.phoneTel}`}
-              onClick={() => track("click_to_call_header")}
+              onClick={() => track("click_call_header")}
               aria-label={`Call ${site.agent.name}`}
               className="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-full bg-secondary text-secondary-foreground"
             >
               <Phone className="h-5 w-5" />
             </a>
-
-            {/* Desktop phone CTA (prominent — calls are the primary objective) */}
             <a
               href={`tel:${site.phoneTel}`}
-              onClick={() => track("click_to_call_header")}
-              className="hidden md:inline-flex items-center gap-2 bg-secondary text-secondary-foreground hover:bg-secondary/90 px-4 py-2 rounded-md font-bold text-sm transition-colors shadow-sm"
+              onClick={() => track("click_call_header")}
+              className="hidden md:inline-flex items-center gap-2 text-navy hover:text-trustblue font-bold text-sm transition-colors"
             >
               <Phone className="h-4 w-4" />
-              <span className="flex flex-col leading-tight items-start">
-                <span className="text-[10px] font-medium uppercase tracking-wide opacity-90">{cta.speakWithJesse}</span>
-                <span>{site.phoneDisplay}</span>
-              </span>
+              {site.phoneDisplay}
             </a>
 
             <button
-              onClick={scrollToForm}
+              onClick={() => {
+                track("click_get_quote_header");
+                scrollToForm();
+              }}
               className="bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-2 rounded-md font-semibold text-sm transition-colors shadow-sm"
             >
-              {cta.checkOptions}
+              {cta.getQuote}
             </button>
           </div>
         </div>
@@ -72,10 +70,10 @@ export function PublicLayout({ children }: { children: React.ReactNode }) {
                 <span className="font-serif font-bold text-xl">{site.brand}</span>
               </Link>
               <p className="text-white/80 text-sm mb-4 max-w-sm">
-                Respectful, clear, and private life insurance guidance for veterans and their families.
+                Private life insurance guidance for veterans and their families.
               </p>
               <div className="flex flex-col gap-2 text-sm text-white/80">
-                <a href={`tel:${site.phoneTel}`} onClick={() => track("click_to_call_header")} className="flex items-center gap-2 hover:text-white transition-colors">
+                <a href={`tel:${site.phoneTel}`} onClick={() => track("click_call_footer")} className="flex items-center gap-2 hover:text-white transition-colors">
                   <Phone className="h-4 w-4" /> {site.phoneDisplay}
                 </a>
                 <a href={`sms:${site.phoneSms}`} onClick={() => track("click_to_text")} className="flex items-center gap-2 hover:text-white transition-colors">
@@ -88,12 +86,12 @@ export function PublicLayout({ children }: { children: React.ReactNode }) {
             </div>
 
             <div>
-              <h3 className="font-semibold text-lg mb-4 font-serif">Resources</h3>
+              <h3 className="font-semibold text-lg mb-4 font-serif">Links</h3>
               <ul className="space-y-2 text-sm text-white/80">
-                <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
-                <li><Link href="/not-affiliated-with-va" className="hover:text-white transition-colors">Not Affiliated with the VA</Link></li>
                 <li><Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
-                <li><Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link></li>
+                <li><Link href="/terms" className="hover:text-white transition-colors">Terms</Link></li>
+                <li><Link href="/not-affiliated-with-va" className="hover:text-white transition-colors">Not Affiliated With VA</Link></li>
+                <li><a href={`tel:${site.phoneTel}`} onClick={() => track("click_call_footer")} className="hover:text-white transition-colors">Contact</a></li>
               </ul>
             </div>
 
@@ -132,28 +130,24 @@ export function PublicLayout({ children }: { children: React.ReactNode }) {
         </div>
       </footer>
 
-      {/* Mobile Sticky CTA bar — Call / Text / Check Options */}
+      {/* Mobile sticky CTA bar — two buttons only: Get Quote / Call Now */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 p-3 bg-white border-t shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] flex gap-2 z-50">
+        <button
+          onClick={() => {
+            track("click_get_quote_sticky_mobile");
+            scrollToForm();
+          }}
+          className="flex-1 bg-primary text-primary-foreground flex items-center justify-center py-3 rounded-md font-bold text-sm"
+        >
+          {cta.getQuote}
+        </button>
         <a
           href={`tel:${site.phoneTel}`}
-          onClick={() => track("click_to_call_sticky_mobile")}
+          onClick={() => track("click_call_sticky_mobile")}
           className="flex-1 bg-secondary text-secondary-foreground flex items-center justify-center gap-1.5 py-3 rounded-md font-bold text-sm"
         >
-          <Phone className="h-4 w-4" /> Call
+          <Phone className="h-4 w-4" /> Call Now
         </a>
-        <a
-          href={`sms:${site.phoneSms}`}
-          onClick={() => track("click_to_text")}
-          className="flex-1 bg-white border-2 border-navy text-navy flex items-center justify-center gap-1.5 py-3 rounded-md font-bold text-sm"
-        >
-          <MessageSquare className="h-4 w-4" /> Text
-        </a>
-        <button
-          onClick={scrollToForm}
-          className="flex-[1.4] bg-primary text-primary-foreground flex items-center justify-center py-3 rounded-md font-bold text-sm"
-        >
-          {cta.checkOptions}
-        </button>
       </div>
     </div>
   );

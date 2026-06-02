@@ -1,6 +1,11 @@
 // Central, A/B-test-ready configuration for HonorFirstLife.
 // Swap these variables to test different headlines, CTA labels, content order,
 // trust-badge order, hero copy, and product-section order without touching markup.
+//
+// This page is intentionally structured as a PPC conversion funnel for cold
+// paid traffic: one clear offer, minimal navigation, fast path to a quote
+// request or a call. Educational / brand-heavy content stays compact and below
+// the first conversion section.
 
 export const site = {
   brand: "HonorFirstLife",
@@ -21,181 +26,145 @@ export const site = {
 
 // Hero copy — primary A/B variables.
 export const hero = {
-  eyebrow: "Private life insurance guidance",
-  headline: "Veteran Life Insurance Made Simple",
+  headline: "Compare Veteran Life Insurance Rates in Minutes",
   subheadline:
-    "Protect your family from funeral costs, final expenses, and leftover bills with clear, respectful guidance from a licensed life insurance professional.",
-  callLine:
-    "Prefer to talk? Call Jesse directly and ask your questions before filling anything out.",
+    "Final expense, term life, whole life, and no-medical-exam options may be available depending on your age, health, state, carrier, and underwriting.",
   trustLine:
     "Private life insurance guidance. Not affiliated with the VA, U.S. government, or any military branch.",
-  microTrust:
-    "No Social Security number, banking information, or payment information is collected on this website.",
-  formHeadline: "See What Options May Fit Your Family",
-  formSubheadline:
-    "Answer a few quick questions so Jesse knows how to help when he calls.",
+  phoneLinePrefix: "Talk to a licensed agent now:",
+  microTrust: "No obligation. No payment information collected on this website.",
 };
 
-// CTA labels — swap to test wording. Variants are documented for future A/B tests:
-// "Call Jesse Now", "Speak With Jesse", "Check My Options", "Get My Free Review", "Request a Callback".
+// CTA labels — swap to test wording.
 export const cta = {
+  getQuote: "Get My Quote",
   callNow: "Call Jesse Now",
-  speakWithJesse: "Speak With Jesse",
-  checkOptions: "Check My Options",
   textJesse: "Text Jesse",
 };
 
-// Trust strip — order is swappable for A/B tests.
+// Trust stack shown above/beside the form, above the fold.
 export const trustBadges: string[] = [
   "Licensed Insurance Professional",
-  "Private Life Insurance Guidance",
-  "Secure Information",
-  "Privacy Protected",
-  "No-Pressure Review",
-  "Veteran-Focused Support",
+  "No Obligation Quote",
+  "Secure Information Request",
+  "Private Carrier Options",
+  "Veteran-Focused Guidance",
+  "No VA or Government Affiliation",
 ];
 
-export const benefits: { title: string; body: string }[] = [
+// Short message-match blocks that mirror likely PPC ad language.
+export const messageMatch: { title: string; body: string }[] = [
   {
-    title: "Protect Your Family",
-    body: "Help reduce the chance that your spouse, children, or loved ones are left with funeral costs, medical bills, or leftover expenses.",
+    title: "Veteran Life Insurance Quotes",
+    body: "Private life insurance options for veterans and families who want clear guidance and a simple next step.",
   },
   {
-    title: "Cover Final Expenses",
-    body: "Private life insurance may help with burial, cremation, funeral costs, and other final expenses.",
+    title: "Final Expense Coverage",
+    body: "Options may help with funeral, cremation, burial, medical bills, or other final expenses.",
   },
   {
-    title: "Review Existing Coverage",
-    body: "Already have a policy? Jesse can help review whether it still fits your goals, budget, and family situation.",
+    title: "No Medical Exam Options",
+    body: "Some products may not require a traditional medical exam. Approval still depends on age, health, state, carrier, product, and underwriting.",
   },
   {
-    title: "Compare Private Options",
-    body: "Jesse can help review options from available private carriers based on your state, age, health, goals, and budget.",
-  },
-];
-
-// Product explanation section — order is swappable for A/B tests.
-export const products: { title: string; body: string; disclosure?: string }[] = [
-  {
-    title: "Veteran Life Insurance / Final Expense",
-    body: "For veterans and families who want help preparing for funeral costs, final bills, and family protection. Family-focused, financially secure, and explained simply with no-pressure guidance.",
-  },
-  {
-    title: "Whole Life Insurance",
-    body: "For people who want long-term protection, stable coverage, and a policy designed to last — lifetime coverage, predictable premiums, and legacy protection.",
-    disclosure:
-      "Whole life insurance may provide lifetime coverage as long as required premiums are paid and the policy remains in force.",
-  },
-  {
-    title: "Indexed Universal Life / IUL",
-    body: "For people who want to discuss life insurance with potential cash value growth and long-term planning flexibility. Jesse can help explain whether this type of policy may or may not fit your goals.",
-    disclosure:
-      "Indexed Universal Life may offer life insurance protection with cash value growth potential, subject to policy terms, caps, participation rates, fees, and other limitations. It is life insurance, not an investment, and results are not guaranteed.",
-  },
-  {
-    title: "Mortgage Protection",
-    body: "For homeowners who want to discuss coverage that may help protect their family if something happens unexpectedly. Options depend on age, health, state, carrier, and underwriting.",
-  },
-  {
-    title: "Policy Review / Replacement",
-    body: "For people who already have coverage but want to know whether they are overpaying, underinsured, or using the wrong type of policy. No pressure to replace.",
-    disclosure:
-      "Do not cancel or replace an existing policy until you have reviewed your options and understand the differences, costs, risks, benefits, and approval requirements.",
+    title: "Compare Private Carrier Options",
+    body: "Jesse can help review options from available private carriers instead of forcing you into one company's product.",
   },
 ];
 
-export const howItWorks: { title: string; body: string }[] = [
+// Reasons to act now — no hype or false scarcity.
+export const whyCheckNow = {
+  title: "Why check now?",
+  reasons: [
+    "Life insurance rates generally increase with age.",
+    "Health changes can affect what options may be available.",
+    "Carrier options, pricing, and approval rules can change.",
+    "A quick review can help you understand what may fit before waiting longer.",
+  ],
+};
+
+// Compact product cards — kept brief and below the first form.
+export const products: { title: string; body: string }[] = [
   {
-    title: "Call, text, or submit the form",
-    body: "Choose the easiest way to reach Jesse.",
+    title: "Final Expense",
+    body: "Help prepare for funeral, cremation, burial, and final bills.",
   },
   {
-    title: "Jesse reviews your goals",
-    body: "He'll ask what you are trying to protect, who you want to protect, and whether you already have coverage.",
+    title: "Term Life",
+    body: "Temporary coverage options for family, income, or mortgage protection needs.",
   },
   {
-    title: "Discuss realistic options",
-    body: "Options depend on age, health, state, carrier, product, and underwriting.",
+    title: "Whole Life",
+    body: "Permanent life insurance designed to stay in force as long as required premiums are paid and the policy remains active.",
   },
   {
-    title: "Apply only if it makes sense",
-    body: "Submitting the website form does not create coverage. Coverage only begins if you apply, are approved, and make the required first premium payment.",
+    title: "Indexed Universal Life",
+    body: "Life insurance with cash value growth potential, subject to policy terms, fees, caps, participation rates, and other limitations.",
+  },
+  {
+    title: "Policy Review",
+    body: "Already have coverage? Jesse can help review whether it still fits your goals.",
   },
 ];
 
-export const whyChoose: { title: string; body: string }[] = [
-  {
-    title: "Licensed Guidance",
-    body: "Speak with a licensed life insurance professional, not a generic lead vendor.",
-  },
-  {
-    title: "Private Carrier Options",
-    body: "Jesse can help compare private life insurance options that may fit your situation.",
-  },
-  {
-    title: "Respectful, No-Pressure Conversation",
-    body: "The goal is to help you understand your options, not pressure you into a decision.",
-  },
-  {
-    title: "Veteran-Focused Support",
-    body: "The page is designed for veterans and families who want simple, direct answers.",
-  },
-  {
-    title: "Clear Next Steps",
-    body: "You'll know what happens after submitting the form or calling.",
-  },
-  {
-    title: "Human Follow-Up",
-    body: "Jesse personally reviews your request and follows up by phone or text.",
-  },
-];
+export const productsDisclaimer =
+  "Product availability, features, costs, and approval depend on the carrier, state, product, age, health, and underwriting.";
 
-// Clearly-marked testimonial placeholders. Replace with approved testimonials only.
-export const testimonialPlaceholders: string[] = [
-  "Jesse helped explain the options in a way that was easy to understand.",
-  "I wanted to make sure my family would not be left with the bill.",
-  "I already had coverage, but wanted someone to help me review it.",
-];
+// Carrier options text row. Logos are intentionally omitted unless written
+// permission to display them is confirmed.
+export const carriers = {
+  intro:
+    "Carrier options may include companies such as Mutual of Omaha, Americo, Transamerica, Aetna, Foresters Financial, Corebridge Financial, and others.",
+};
 
+// Compact credibility block for the agent.
+export const credibility = {
+  title: "Speak With Jesse Reiter",
+  body: "Jesse is a licensed life insurance professional who helps veterans and families review private life insurance options. The goal is simple: clear answers, realistic options, and no-pressure guidance.",
+};
+
+// Clearly-marked testimonial placeholder. No fake names, reviews, or ratings.
+export const testimonials = {
+  title: "Real Client Feedback Coming Soon",
+  body: "Jesse may add approved client feedback here once available. For now, you can call directly and ask your questions before deciding whether to move forward.",
+};
+
+// Short, conversion-focused FAQ.
 export const faqs: { q: string; a: string }[] = [
   {
-    q: "Is HonorFirstLife the VA?",
+    q: "Is HonorFirstLife part of the VA?",
     a: "No. HonorFirstLife is a private life insurance resource and is not affiliated with the VA, U.S. government, or any military branch.",
   },
   {
     q: "Can I call instead of filling out the form?",
-    a: "Yes. If you prefer to talk, you can call Jesse directly using the phone button on this page.",
+    a: "Yes. Use the Call Jesse Now button to speak directly with Jesse.",
   },
   {
-    q: "What kind of life insurance can Jesse help with?",
-    a: "Jesse can help review private options for final expense, whole life, term life, mortgage protection, Indexed Universal Life, and existing policy reviews.",
+    q: "Can veterans get life insurance without a medical exam?",
+    a: "Some private products may not require a traditional medical exam. Approval, pricing, and coverage depend on age, health, state, product, carrier, and underwriting.",
   },
   {
     q: "Is approval guaranteed?",
-    a: "No. Approval, coverage amount, premium, and product availability depend on age, health, state, carrier, product, and underwriting.",
-  },
-  {
-    q: "Do I need to enter my Social Security number on this website?",
-    a: "No. Do not enter Social Security numbers, banking information, payment information, VA claim numbers, Medicare numbers, or full medical history on this website.",
+    a: "No. Coverage is not guaranteed.",
   },
   {
     q: "What happens after I submit the form?",
-    a: "Jesse may call or text you based on your selected contact preference to review your goals and discuss what options may be available.",
+    a: "Jesse may call or text you to review your request and discuss what options may be available.",
   },
   {
-    q: "Can Jesse review a policy I already have?",
-    a: "Yes. Jesse can help review an existing policy and discuss whether it still fits your goals, budget, and family needs.",
-  },
-  {
-    q: "Is IUL right for everyone?",
-    a: "No. Indexed Universal Life is not right for everyone. It may offer protection with cash value growth potential, but it also includes policy terms, fees, caps, participation rates, and other limitations that should be explained before deciding.",
+    q: "Do I need to enter my Social Security number here?",
+    a: "No. Do not enter Social Security numbers, banking information, payment information, VA claim numbers, Medicare numbers, or full medical history on this website.",
   },
 ];
 
 // Compliance disclosures shown near the bottom of the page and in the footer.
 export const disclosures = {
   main: "HonorFirstLife is a private life insurance resource. Not affiliated with the VA, U.S. government, or any military branch. Product availability, coverage amounts, premiums, and approval depend on age, health, state, product, carrier, and underwriting. Submitting this form does not create coverage or guarantee approval. A licensed insurance professional may contact you to review available options. Services are available only where Jesse Reiter is properly licensed and appointed.",
-  replacement:
-    "Do not cancel, replace, or modify an existing life insurance policy until you have reviewed the costs, benefits, risks, surrender charges, waiting periods, contestability periods, and approval requirements of any new coverage.",
   iul: "Indexed Universal Life policies are life insurance products, not direct investments. Cash value growth potential depends on policy terms, index crediting methods, caps, participation rates, fees, and other limitations. Results are not guaranteed.",
+  replacement:
+    "Do not cancel, replace, or modify an existing life insurance policy until you understand the costs, benefits, risks, surrender charges, waiting periods, contestability periods, and approval requirements of any new coverage.",
 };
+
+// Form disclaimer shown directly under the lead form.
+export const formDisclaimer =
+  "Do not enter Social Security numbers, banking information, payment information, VA claim numbers, Medicare numbers, or full medical history on this website.";

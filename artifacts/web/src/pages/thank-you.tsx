@@ -29,7 +29,7 @@ export default function ThankYou() {
         <h1 className="text-4xl font-serif font-bold text-navy mb-4">Your request was received.</h1>
 
         <p className="text-xl text-muted-foreground mb-8">
-          Thank you. {site.agent.name.split(" ")[0]} received your request and may call or text you soon based on the contact preference you selected.
+          Thank you. {site.agent.name.split(" ")[0]} received your request and may call or text you soon to review what options may be available.
         </p>
 
         <div className="bg-softgray border-2 border-gold rounded-xl p-8 max-w-md w-full mb-8 shadow-sm">
@@ -38,7 +38,7 @@ export default function ThankYou() {
           <div className="flex flex-col gap-3">
             <a
               href={`tel:${site.phoneTel}`}
-              onClick={() => track("click_to_call_final_cta")}
+              onClick={() => track("click_call_thank_you")}
               className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 px-6 py-3 rounded-md font-bold transition-colors flex items-center justify-center gap-2"
             >
               <Phone className="h-5 w-5" /> {cta.callNow}

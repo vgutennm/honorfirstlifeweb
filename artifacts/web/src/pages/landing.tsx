@@ -55,7 +55,7 @@ export default function Landing() {
 
   const track = useTrack();
 
-  // Primary above-the-fold CTAs: Get My Quote (primary) + Talk With a Licensed Agent (secondary).
+  // Primary above-the-fold CTAs: Get My Quote (primary) + Licensed Agent (secondary).
   const HeroCtas = ({
     where,
     variant = "dark",

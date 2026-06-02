@@ -107,11 +107,8 @@ export default function Landing() {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight mb-5">
                 {hero.headline}
               </h1>
-              <p className="text-lg md:text-xl text-white/90 mb-4 leading-relaxed">
+              <p className="text-lg md:text-xl text-white/90 mb-6 leading-relaxed">
                 {hero.subheadline}
-              </p>
-              <p className="text-sm md:text-base text-gold font-semibold mb-6 leading-relaxed">
-                {hero.trustLine}
               </p>
 
               <HeroCtas where="hero" variant="dark" />

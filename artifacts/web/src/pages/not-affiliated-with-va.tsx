@@ -27,7 +27,7 @@ export default function NotAffiliated() {
             </p>
             
             <p>
-              We are an independent, private insurance agency operated by Jesse Reiter, a licensed life insurance professional.
+              We are an independent, private insurance agency operated by a licensed life insurance professional.
             </p>
 
             <p>

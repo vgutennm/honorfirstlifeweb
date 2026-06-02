@@ -19,7 +19,7 @@ export default function Terms() {
           <p>By accessing or using the HonorFirstLife website, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our website.</p>
 
           <h2>2. Nature of Service</h2>
-          <p>HonorFirstLife provides information and connects users with Jesse Reiter, a licensed life insurance professional. We are not an insurance carrier. Any insurance coverage is subject to the terms and conditions of the specific policy issued by the applicable insurance company.</p>
+          <p>HonorFirstLife provides information and connects users with a licensed life insurance professional. We are not an insurance carrier. Any insurance coverage is subject to the terms and conditions of the specific policy issued by the applicable insurance company.</p>
 
           <h2>3. Disclaimers</h2>
           <p><strong>Not Affiliated with the VA:</strong> HonorFirstLife is a private business. We are not affiliated with, endorsed by, or sponsored by the Department of Veterans Affairs (VA), the United States government, or any military branch.</p>
@@ -35,7 +35,7 @@ export default function Terms() {
           <p>To the fullest extent permitted by law, HonorFirstLife and its affiliates shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or relating to your use of the website or our services.</p>
 
           <h2>7. Contact Information</h2>
-          <p>If you have any questions about these Terms, please contact us at jesse@honorfirstlife.com.</p>
+          <p>If you have any questions about these Terms, please contact us at info@honorfirstlife.com.</p>
         </div>
       </div>
     </PublicLayout>

@@ -23,23 +23,23 @@ export default function PrivacyPolicy() {
           <p>We use the information we collect to:</p>
           <ul>
             <li>Contact you regarding your request for life insurance information.</li>
-            <li>Connect you with a licensed insurance professional (Jesse Reiter).</li>
+            <li>Connect you with a licensed insurance professional.</li>
             <li>Determine basic eligibility for various private life insurance products.</li>
             <li>Improve our website and services.</li>
           </ul>
 
           <h2>3. SMS & Communication Consent</h2>
-          <p>By providing your phone number and submitting our form, you consent to receive calls and text messages from HonorFirstLife / Jesse Reiter regarding your inquiry. Message and data rates may apply. You can opt out of text messages at any time by replying STOP.</p>
+          <p>By providing your phone number and submitting our form, you consent to receive calls and text messages from HonorFirstLife regarding your inquiry. Message and data rates may apply. You can opt out of text messages at any time by replying STOP.</p>
 
           <h2>4. Information Sharing</h2>
-          <p>We do not sell your personal information to third-party lead aggregators or marketing lists. Your information is shared only with Jesse Reiter (a licensed insurance professional) and necessary service providers who assist in our operations.</p>
+          <p>We do not sell your personal information to third-party lead aggregators or marketing lists. Your information is shared only with our licensed insurance professional and necessary service providers who assist in our operations.</p>
 
           <h2>5. Not Affiliated with the VA</h2>
           <p>HonorFirstLife is a private commercial website. We are not affiliated with, endorsed by, or sponsored by the Department of Veterans Affairs (VA), the U.S. government, or any military branch.</p>
 
           <h2>6. Contact Us</h2>
           <p>If you have questions about this Privacy Policy, please contact us at:</p>
-          <p>Email: jesse@honorfirstlife.com<br/>Phone: (800) 555-0199</p>
+          <p>Email: info@honorfirstlife.com<br/>Phone: (800) 555-0199</p>
         </div>
       </div>
     </PublicLayout>

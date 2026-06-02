@@ -154,7 +154,7 @@ export function LeadForm() {
     <div id="lead-form-container" className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden">
       <div className="bg-navy p-6 text-white">
         <h2 className="text-2xl font-serif font-bold mb-2">
-          {step === 1 ? "Start With a Quick Quote Check" : "Where Should Jesse Send Your Options?"}
+          {step === 1 ? "Start With a Quick Quote Check" : "Where Should We Send Your Options?"}
         </h2>
         <div className="flex items-center justify-between text-sm">
           <span>Step {step} of 2</span>
@@ -228,7 +228,7 @@ export function LeadForm() {
                 )} />
 
                 <p className="text-xs text-muted-foreground">
-                  Prefer to talk first? You can call or text {site.agent.name.split(" ")[0]} directly using the buttons on this page.
+                  Prefer to talk first? You can call or text a licensed agent directly using the buttons on this page.
                 </p>
               </div>
             )}

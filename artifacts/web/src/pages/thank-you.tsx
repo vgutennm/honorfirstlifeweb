@@ -29,11 +29,11 @@ export default function ThankYou() {
         <h1 className="text-4xl font-serif font-bold text-navy mb-4">Your request was received.</h1>
 
         <p className="text-xl text-muted-foreground mb-8">
-          Thank you. {site.agent.name.split(" ")[0]} received your request and may call or text you soon to review what options may be available.
+          Thank you. A licensed agent received your request and may call or text you soon to review what options may be available.
         </p>
 
         <div className="bg-softgray border-2 border-gold rounded-xl p-8 max-w-md w-full mb-8 shadow-sm">
-          <p className="font-bold text-navy mb-2 text-lg">Please save {site.agent.name.split(" ")[0]}'s number so you recognize the call:</p>
+          <p className="font-bold text-navy mb-2 text-lg">Please save our number so you recognize the call:</p>
           <p className="text-3xl font-serif font-bold text-trustblue mb-4">{site.phoneDisplay}</p>
           <div className="flex flex-col gap-3">
             <a
@@ -48,7 +48,7 @@ export default function ThankYou() {
               onClick={() => track("click_to_text")}
               className="w-full bg-white border-2 border-navy text-navy hover:bg-gray-50 px-6 py-3 rounded-md font-bold transition-colors flex items-center justify-center gap-2"
             >
-              <MessageSquare className="h-5 w-5" /> {cta.textJesse}
+              <MessageSquare className="h-5 w-5" /> {cta.textAgent}
             </a>
           </div>
         </div>

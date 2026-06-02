@@ -13,9 +13,9 @@ export const site = {
   phoneDisplay: "(800) 555-0199",
   phoneTel: "1-800-555-0199",
   phoneSms: "1-800-555-0199",
-  email: "jesse@honorfirstlife.com",
+  email: "info@honorfirstlife.com",
   agent: {
-    name: "Jesse Reiter",
+    name: "Licensed Agent",
     title: "Licensed Life Insurance Professional",
     npn: "[Placeholder NPN]",
     licensedScope: "all 50 states",
@@ -40,7 +40,7 @@ export const hero = {
 export const cta = {
   getQuote: "Get My Quote",
   callNow: "Licensed Agent",
-  textJesse: "Text Jesse",
+  textAgent: "Text a Licensed Agent",
 };
 
 // Trust stack shown above/beside the form, above the fold.
@@ -69,7 +69,7 @@ export const messageMatch: { title: string; body: string }[] = [
   },
   {
     title: "Compare Private Carrier Options",
-    body: "Jesse can help review options from available private carriers instead of forcing you into one company's product.",
+    body: "A licensed agent can help review options from available private carriers instead of forcing you into one company's product.",
   },
 ];
 
@@ -104,7 +104,7 @@ export const products: { title: string; body: string }[] = [
   },
   {
     title: "Policy Review",
-    body: "Already have coverage? Jesse can help review whether it still fits your goals.",
+    body: "Already have coverage? A licensed agent can help review whether it still fits your goals.",
   },
 ];
 
@@ -120,14 +120,14 @@ export const carriers = {
 
 // Compact credibility block for the agent.
 export const credibility = {
-  title: "Speak With Jesse Reiter",
-  body: "Jesse is a licensed life insurance professional who helps veterans and families review private life insurance options. The goal is simple: clear answers, realistic options, and no-pressure guidance.",
+  title: "Speak With a Licensed Agent",
+  body: "A licensed life insurance professional helps veterans and families review private life insurance options. The goal is simple: clear answers, realistic options, and no-pressure guidance.",
 };
 
 // Clearly-marked testimonial placeholder. No fake names, reviews, or ratings.
 export const testimonials = {
   title: "Real Client Feedback Coming Soon",
-  body: "Jesse may add approved client feedback here once available. For now, you can call directly and ask your questions before deciding whether to move forward.",
+  body: "A licensed agent may add approved client feedback here once available. For now, you can call directly and ask your questions before deciding whether to move forward.",
 };
 
 // Short, conversion-focused FAQ.
@@ -150,7 +150,7 @@ export const faqs: { q: string; a: string }[] = [
   },
   {
     q: "What happens after I submit the form?",
-    a: "Jesse may call or text you to review your request and discuss what options may be available.",
+    a: "A licensed agent may call or text you to review your request and discuss what options may be available.",
   },
   {
     q: "Do I need to enter my Social Security number here?",
@@ -160,7 +160,7 @@ export const faqs: { q: string; a: string }[] = [
 
 // Compliance disclosures shown near the bottom of the page and in the footer.
 export const disclosures = {
-  main: "HonorFirstLife is a private life insurance resource. Not affiliated with the VA, U.S. government, or any military branch. Product availability, coverage amounts, premiums, and approval depend on age, health, state, product, carrier, and underwriting. Submitting this form does not create coverage or guarantee approval. A licensed insurance professional may contact you to review available options. Services are available only where Jesse Reiter is properly licensed and appointed.",
+  main: "HonorFirstLife is a private life insurance resource. Not affiliated with the VA, U.S. government, or any military branch. Product availability, coverage amounts, premiums, and approval depend on age, health, state, product, carrier, and underwriting. Submitting this form does not create coverage or guarantee approval. A licensed insurance professional may contact you to review available options. Services are available only where the agent is properly licensed and appointed.",
   iul: "Indexed Universal Life policies are life insurance products, not direct investments. Cash value growth potential depends on policy terms, index crediting methods, caps, participation rates, fees, and other limitations. Results are not guaranteed.",
   replacement:
     "Do not cancel, replace, or modify an existing life insurance policy until you understand the costs, benefits, risks, surrender charges, waiting periods, contestability periods, and approval requirements of any new coverage.",

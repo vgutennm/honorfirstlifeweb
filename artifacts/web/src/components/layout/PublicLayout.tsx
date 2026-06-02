@@ -75,7 +75,7 @@ export function PublicLayout({ children }: { children: React.ReactNode }) {
                   <Phone className="h-4 w-4" /> {site.phoneDisplay}
                 </a>
                 <a href={`sms:${site.phoneSms}`} onClick={() => track("click_to_text")} className="flex items-center gap-2 hover:text-white transition-colors">
-                  <MessageSquare className="h-4 w-4" /> Text {site.agent.name.split(" ")[0]}
+                  <MessageSquare className="h-4 w-4" /> Text a Licensed Agent
                 </a>
                 <a href={`mailto:${site.email}`} className="flex items-center gap-2 hover:text-white transition-colors">
                   <Mail className="h-4 w-4" /> {site.email}
@@ -96,7 +96,7 @@ export function PublicLayout({ children }: { children: React.ReactNode }) {
             <div>
               <h3 className="font-semibold text-lg mb-4 font-serif">Licensing</h3>
               <p className="text-white/80 text-sm leading-relaxed">
-                Services are available only where {site.agent.name} is properly licensed and appointed.<br /><br />
+                Services are available only where the agent is properly licensed and appointed.<br /><br />
                 Licensed in: {site.agent.licensedScope}<br />
                 NPN: {site.agent.npn}
               </p>

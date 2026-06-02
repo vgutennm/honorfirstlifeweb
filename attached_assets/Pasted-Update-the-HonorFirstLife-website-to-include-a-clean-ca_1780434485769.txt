@@ -1,0 +1,139 @@
+Update the HonorFirstLife website to include a clean carrier logo strip using the uploaded carrier-logo image as the source/reference.
+
+Image file to use:
+
+`/mnt/data/logos2.jpg`
+
+## Goal
+
+Create a professional “Carrier Options” logo strip on the landing page to quickly build trust above the fold or directly below the hero section.
+
+## Placement
+
+Add the logo strip directly below the hero/trust badge area and before the benefits section.
+
+Suggested section order:
+
+1. Hero with Get My Quote form
+2. Trust badges
+3. Carrier logo strip
+4. Benefits section
+5. How it works
+6. FAQ
+7. Final CTA
+
+## Section Heading
+
+Use this heading:
+
+**Carrier Options Jesse Can Help You Review**
+
+Subheading:
+
+**Jesse can help compare private life insurance options from multiple carriers. Product availability, pricing, and approval depend on age, health, state, carrier, product, and underwriting.**
+
+## Design Requirements
+
+Create a clean responsive logo strip that displays the carrier logos in a polished way.
+
+Important: Do not simply place the full uploaded image as one large image if it looks cramped or blurry. Instead, use the uploaded image as the visual reference and create a clean website-ready carrier strip.
+
+If separate logo assets are not available yet, start by using the uploaded image inside a styled white card with proper cropping, max width, and responsive behavior.
+
+Build it so separate individual logo images can be swapped in later.
+
+## Initial Implementation
+
+Use the uploaded image as a temporary combined logo asset.
+
+Display it inside a centered white card:
+
+* White background
+* Rounded corners
+* Soft shadow
+* Max width around 900px
+* Full responsive width on mobile
+* Padding around image
+* Image should maintain aspect ratio
+* Image should not overflow on mobile
+* Alt text: “Life insurance carrier options including Americo, Aetna, AIG, Transamerica, Mutual of Omaha, Foresters Financial, and others”
+
+## Mobile Requirements
+
+On mobile:
+
+* Section must scale cleanly
+* No horizontal scrolling
+* Image should fit within screen width
+* Heading and subheading should remain readable
+* Add enough padding above and below the section
+* Do not make the image too tall on mobile
+
+## Future Individual Logo Support
+
+Create the component so later we can replace the combined image with individual logos.
+
+Component name:
+
+`CarrierLogoStrip`
+
+Add a future-ready data array like:
+
+```ts
+const carriers = [
+  "Americo",
+  "Aetna",
+  "AIG",
+  "Global Atlantic Financial Group",
+  "National Life Group",
+  "Gerber Life",
+  "Transamerica",
+  "F&G",
+  "Oxford Life Insurance Company",
+  "Royal Neighbors of America",
+  "Athene Annuity",
+  "Foresters Financial",
+  "Mutual of Omaha",
+  "John Hancock",
+  "Vitality",
+  "Columbian Financial Group",
+  "Prosperity Life Group",
+  "North American",
+  "American-Amicable Group of Companies",
+  "ReliaShield",
+  "Guardian Wealth Strategies"
+];
+```
+
+For now, show the combined uploaded image. Later, if individual logo files are added to `/public/carriers/`, render them as individual logo tiles.
+
+## Compliance Note
+
+Add a small compliance note under the logo strip:
+
+**Carrier availability varies by state, product, eligibility, and underwriting. Logos and names are shown only to represent potential private carrier options and do not imply approval, endorsement, or guaranteed coverage.**
+
+## Styling
+
+Use the existing HonorFirstLife design system:
+
+* Navy text
+* Gold accents
+* White card
+* Soft gray background section
+* Clean trust-focused style
+
+Do not use aggressive red styling in this section.
+
+## Acceptance Criteria
+
+The update is complete when:
+
+* A new CarrierLogoStrip component exists.
+* The uploaded carrier image appears cleanly on the landing page.
+* The logo strip is responsive on desktop and mobile.
+* The section does not create horizontal scrolling.
+* The compliance note appears below the logo strip.
+* The image has proper alt text.
+* The component is structured so individual logos can replace the combined image later.
+* The section improves trust without making unsupported claims.

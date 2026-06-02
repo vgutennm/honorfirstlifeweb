@@ -244,7 +244,7 @@ export default function Landing() {
             Ready to see what may fit your family?
           </h2>
           <p className="text-lg text-white/85 mb-8 leading-relaxed">
-            Request a quote or call Jesse directly. No obligation, and no payment information is collected on this website.
+            Request a quote or call a licensed agent directly. No obligation, and no payment information is collected on this website.
           </p>
           <div className="flex justify-center">
             <HeroCtas where="final_cta" variant="dark" />
@@ -254,7 +254,7 @@ export default function Landing() {
               <Mail className="h-4 w-4" /> {site.email}
             </a>
             <a href={`sms:${site.phoneSms}`} onClick={() => track("click_to_text")} className="flex items-center gap-2 hover:text-white transition-colors">
-              <MessageSquare className="h-4 w-4" /> {cta.textJesse}
+              <MessageSquare className="h-4 w-4" /> {cta.textAgent}
             </a>
           </div>
         </div>

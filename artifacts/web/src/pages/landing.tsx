@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import { PublicLayout } from "@/components/layout/PublicLayout";
 import { CarrierLogoStrip } from "@/components/CarrierLogoStrip";
 import { useSeo } from "@/lib/seo";
@@ -47,6 +48,31 @@ export default function Landing() {
   );
 
   const track = useTrack();
+
+  // The quote form is an external CRM embed. When that embed reports its
+  // content height via postMessage (see the CRM /embed/form page), we switch
+  // from the fixed/cropped fallback to an exact auto-height so the frame never
+  // scrolls internally and shows no empty space on either step. Until a height
+  // message arrives, the cropped fallback below renders.
+  const formIframeRef = useRef<HTMLIFrameElement>(null);
+  const [formHeight, setFormHeight] = useState<number | null>(null);
+
+  useEffect(() => {
+    const CRM_ORIGIN = "https://contact-manager-lite-vgutenm.replit.app";
+    function onMessage(e: MessageEvent) {
+      if (e.origin !== CRM_ORIGIN) return;
+      const data = e.data as { type?: string; height?: number } | null;
+      if (
+        data?.type === "hfl-embed-height" &&
+        typeof data.height === "number" &&
+        data.height > 0
+      ) {
+        setFormHeight(Math.ceil(data.height));
+      }
+    }
+    window.addEventListener("message", onMessage);
+    return () => window.removeEventListener("message", onMessage);
+  }, []);
 
   // Primary above-the-fold CTAs: Get My Quote (primary) + Licensed Agent (secondary).
   const HeroCtas = ({
@@ -137,20 +163,40 @@ export default function Landing() {
             </div>
 
             {/* Hero form — external CRM embed.
-               The embed renders its own card on a slate-50 body with built-in
-               padding. We can't change that cross-origin app, so we crop its
-               outer padding here (overflow-hidden + negative insets) and tune
-               the height per breakpoint so the frame hugs the form. Bottom is
-               NOT cropped so the taller step 2 / mobile steps stay reachable
-               (they scroll inside the frame if needed). */}
+               Preferred path: the embed posts its content height (type
+               "hfl-embed-height") and we set an exact auto-height (formHeight),
+               so the frame never scrolls internally and shows no empty space.
+               Fallback (no message yet): the embed renders its card on a
+               slate-50 body with padding, so we crop the slate (overflow-hidden
+               + negative insets), mask the exposed corners, and use a tuned
+               per-breakpoint height. */}
             <div id="form-section" className="scroll-mt-20">
-              <div className="overflow-hidden rounded-xl shadow-lg bg-white">
+              <div className="relative overflow-hidden rounded-xl shadow-lg bg-white">
                 <iframe
+                  ref={formIframeRef}
                   src="https://contact-manager-lite-vgutenm.replit.app/embed/form"
                   title="Request your quote"
-                  className="block border-none bg-white -mt-12 sm:-mt-[52px] -ml-4 w-[calc(100%+2rem)] h-[700px] sm:h-[608px] lg:h-[624px] xl:h-[604px]"
-                  style={{ border: "none" }}
+                  className={
+                    formHeight
+                      ? "block border-none bg-white w-full"
+                      : "block border-none bg-white -mt-6 -ml-4 w-[calc(100%+2rem)] h-[700px] sm:h-[608px] lg:h-[624px] xl:h-[604px]"
+                  }
+                  style={
+                    formHeight
+                      ? { border: "none", height: `${formHeight}px` }
+                      : { border: "none" }
+                  }
                 />
+                {/* Fallback only: while the embed isn't reporting its height we
+                   crop the slate band, which exposes the card's rounded-corner
+                   gaps — mask them with navy. Once auto-height is active the
+                   embed renders flush and these masks are hidden. */}
+                {!formHeight && (
+                  <>
+                    <div aria-hidden className="pointer-events-none absolute top-0 left-0 h-6 w-6 bg-navy rounded-tl-xl" />
+                    <div aria-hidden className="pointer-events-none absolute top-0 right-0 h-6 w-6 bg-navy rounded-tr-xl" />
+                  </>
+                )}
               </div>
             </div>
           </div>

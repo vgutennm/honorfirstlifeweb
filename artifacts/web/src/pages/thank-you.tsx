@@ -34,7 +34,13 @@ export default function ThankYou() {
 
         <div className="bg-softgray border-2 border-gold rounded-xl p-8 max-w-md w-full mb-8 shadow-sm">
           <p className="font-bold text-navy mb-2 text-lg">Please save our number so you recognize the call:</p>
-          <p className="text-3xl font-serif font-bold text-trustblue mb-4">{site.phoneDisplay}</p>
+          <a
+            href={`tel:${site.phoneTel}`}
+            onClick={() => track("click_call_thank_you")}
+            className="block text-3xl font-serif font-bold text-trustblue mb-4 hover:underline"
+          >
+            {site.phoneDisplay}
+          </a>
           <div className="flex flex-col gap-3">
             <a
               href={`tel:${site.phoneTel}`}

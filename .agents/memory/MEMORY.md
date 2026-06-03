@@ -1,0 +1,1 @@
+- [grep/rg string redaction](grep-string-redaction.md) — searches here mask string literals as "n"/"ln"; read the file to see real text.

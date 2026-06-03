@@ -1,5 +1,4 @@
 import { PublicLayout } from "@/components/layout/PublicLayout";
-import { LeadForm } from "@/components/LeadForm";
 import { CarrierLogoStrip } from "@/components/CarrierLogoStrip";
 import { useSeo } from "@/lib/seo";
 import { useTrack } from "@/hooks/use-track";
@@ -137,9 +136,16 @@ export default function Landing() {
               </div>
             </div>
 
-            {/* Hero form */}
+            {/* Hero form — external CRM embed */}
             <div id="form-section" className="lg:pl-4 scroll-mt-20">
-              <LeadForm />
+              <iframe
+                src="https://contact-manager-lite-vgutenm.replit.app/embed/form"
+                title="Request your quote"
+                width="100%"
+                height="800"
+                className="w-full rounded-lg border-none bg-white"
+                style={{ border: "none" }}
+              />
             </div>
           </div>
         </div>

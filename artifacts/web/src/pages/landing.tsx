@@ -171,15 +171,15 @@ export default function Landing() {
                + negative insets), mask the exposed corners, and use a tuned
                per-breakpoint height. */}
             <div id="form-section" className="scroll-mt-20">
-              <div className="relative overflow-hidden rounded-xl shadow-lg bg-white">
+              <div className="relative overflow-hidden rounded-xl shadow-lg bg-navy">
                 <iframe
                   ref={formIframeRef}
                   src="https://contact-manager-lite-vgutenm.replit.app/embed/form"
                   title="Request your quote"
                   className={
                     formHeight
-                      ? "block border-none bg-white w-full"
-                      : "block border-none bg-white -mt-6 -ml-4 w-[calc(100%+2rem)] h-[700px] sm:h-[608px] lg:h-[624px] xl:h-[604px]"
+                      ? "block border-none bg-navy w-full"
+                      : "block border-none bg-navy -mt-6 -ml-4 w-[calc(100%+2rem)] h-[700px] sm:h-[608px] lg:h-[624px] xl:h-[604px]"
                   }
                   style={
                     formHeight
@@ -193,8 +193,8 @@ export default function Landing() {
                    embed renders flush and these masks are hidden. */}
                 {!formHeight && (
                   <>
-                    <div aria-hidden className="pointer-events-none absolute top-0 left-0 h-6 w-6 bg-navy rounded-tl-xl" />
-                    <div aria-hidden className="pointer-events-none absolute top-0 right-0 h-6 w-6 bg-navy rounded-tr-xl" />
+                    <div aria-hidden className="pointer-events-none absolute top-0 left-0 h-7 w-6 bg-navy" />
+                    <div aria-hidden className="pointer-events-none absolute top-0 right-0 h-7 w-6 bg-navy" />
                   </>
                 )}
               </div>

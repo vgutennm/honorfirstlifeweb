@@ -136,16 +136,22 @@ export default function Landing() {
               </div>
             </div>
 
-            {/* Hero form — external CRM embed */}
-            <div id="form-section" className="lg:pl-4 scroll-mt-20">
-              <iframe
-                src="https://contact-manager-lite-vgutenm.replit.app/embed/form"
-                title="Request your quote"
-                width="100%"
-                height="800"
-                className="w-full rounded-lg border-none bg-white"
-                style={{ border: "none" }}
-              />
+            {/* Hero form — external CRM embed.
+               The embed renders its own card on a slate-50 body with built-in
+               padding. We can't change that cross-origin app, so we crop its
+               outer padding here (overflow-hidden + negative insets) and tune
+               the height per breakpoint so the frame hugs the form. Bottom is
+               NOT cropped so the taller step 2 / mobile steps stay reachable
+               (they scroll inside the frame if needed). */}
+            <div id="form-section" className="scroll-mt-20">
+              <div className="overflow-hidden rounded-xl shadow-lg bg-white">
+                <iframe
+                  src="https://contact-manager-lite-vgutenm.replit.app/embed/form"
+                  title="Request your quote"
+                  className="block border-none bg-white -mt-4 -ml-4 w-[calc(100%+2rem)] h-[760px] lg:h-[744px]"
+                  style={{ border: "none" }}
+                />
+              </div>
             </div>
           </div>
         </div>

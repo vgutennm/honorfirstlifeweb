@@ -5,14 +5,9 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 
 import Landing from "@/pages/landing";
-import ThankYou from "@/pages/thank-you";
 import PrivacyPolicy from "@/pages/privacy-policy";
 import Terms from "@/pages/terms";
 import NotAffiliated from "@/pages/not-affiliated-with-va";
-
-import AdminLogin from "@/pages/admin/login";
-import AdminLeads from "@/pages/admin/leads";
-import AdminLeadDetail from "@/pages/admin/leads/[id]";
 
 const queryClient = new QueryClient();
 
@@ -20,15 +15,10 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Landing} />
-      <Route path="/thank-you" component={ThankYou} />
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route path="/terms" component={Terms} />
       <Route path="/not-affiliated-with-va" component={NotAffiliated} />
-      
-      <Route path="/admin" component={AdminLogin} />
-      <Route path="/admin/leads" component={AdminLeads} />
-      <Route path="/admin/leads/:id" component={AdminLeadDetail} />
-      
+
       <Route component={NotFound} />
     </Switch>
   );

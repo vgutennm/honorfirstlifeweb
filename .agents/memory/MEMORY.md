@@ -1,1 +1,2 @@
 - [grep/rg string redaction](grep-string-redaction.md) — searches here mask string literals as "n"/"ln"; read the file to see real text.
+- [CRM quote-form iframe embed cropping](crm-iframe-embed-cropping.md) — landing form is a non-editable external CRM iframe cropped via negative margins/per-breakpoint heights; static crop has hard limits.

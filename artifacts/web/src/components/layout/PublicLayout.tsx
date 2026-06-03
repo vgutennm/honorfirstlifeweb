@@ -60,7 +60,7 @@ export function PublicLayout({ children }: { children: React.ReactNode }) {
 
       <main className="flex-1 pb-24 md:pb-0">{children}</main>
 
-      <footer className="bg-navy text-white py-12 border-t border-navy/20 mt-12">
+      <footer className="bg-navy text-white pt-12 pb-28 md:pb-12 border-t border-navy/20 mt-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div className="col-span-1 md:col-span-2">

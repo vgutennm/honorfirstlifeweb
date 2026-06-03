@@ -148,7 +148,7 @@ export default function Landing() {
                 <iframe
                   src="https://contact-manager-lite-vgutenm.replit.app/embed/form"
                   title="Request your quote"
-                  className="block border-none bg-white -mt-4 -ml-4 w-[calc(100%+2rem)] h-[700px] sm:h-[640px] lg:h-[660px]"
+                  className="block border-none bg-white -mt-8 -ml-4 w-[calc(100%+2rem)] h-[700px] sm:h-[640px] lg:h-[660px]"
                   style={{ border: "none" }}
                 />
               </div>

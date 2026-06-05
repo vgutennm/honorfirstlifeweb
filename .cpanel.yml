@@ -1,0 +1,12 @@
+---
+deployment:
+  tasks:
+    # IMPORTANT: replace CPANEL_USERNAME below with your real cPanel username.
+    # For an addon/subdomain, point DEPLOYPATH at that domain's document root
+    # instead, e.g. /home/CPANEL_USERNAME/public_html/honorfirstlife.com
+    - export DEPLOYPATH=/home/CPANEL_USERNAME/public_html
+    - /bin/mkdir -p $DEPLOYPATH
+    # Remove the previous build's fingerprinted bundles so they don't pile up
+    - /bin/rm -rf $DEPLOYPATH/assets
+    # Copy the pre-built static site (including dotfiles like .htaccess) into the docroot
+    - /bin/cp -R artifacts/web/dist/public/. $DEPLOYPATH/

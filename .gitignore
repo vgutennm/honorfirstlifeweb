@@ -47,3 +47,7 @@ Thumbs.db
 # Replit
 .cache/
 .local/
+
+# cPanel deploy: allow the web build output to be committed
+!artifacts/web/dist/
+!artifacts/web/dist/**

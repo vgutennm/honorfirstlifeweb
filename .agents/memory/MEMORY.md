@@ -1,2 +1,2 @@
-- [grep/rg string redaction](grep-string-redaction.md) — searches here mask string literals as "n"/"ln"; read the file to see real text.
-- [CRM quote-form iframe embed cropping](crm-iframe-embed-cropping.md) — landing form is a non-editable external CRM iframe cropped via negative margins/per-breakpoint heights; static crop has hard limits.
+- [Favicon from logo](favicon-from-logo.md) — favicon is the shield emblem cropped out of the full logo lockup (exact crop offset recorded); rebuild after.
+- [cPanel static deploy](cpanel-static-deploy.md) — site ships to cPanel as a pre-built static SPA via committed dist + .cpanel.yml; rebuild before pushing.

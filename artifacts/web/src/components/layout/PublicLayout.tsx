@@ -1,7 +1,27 @@
+import { useEffect, useRef } from "react";
 import { Link } from "wouter";
 import { ShieldAlert, Phone, Mail, MessageSquare } from "lucide-react";
 import { site, cta, disclosures } from "@/lib/site";
 import { useTrack } from "@/hooks/use-track";
+
+const SITE_SEAL_SRC =
+  "https://seal.starfieldtech.com/getSealBasic?sealID=kU7VR8YsNpfPpgpzAk3Z2Tzqum4E0uDNZiE195y6juxeGvAiCb8ngU9Q8BMU";
+
+function SiteSeal() {
+  const ref = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    const span = ref.current;
+    if (!span || span.querySelector("script")) return;
+    const script = document.createElement("script");
+    script.async = true;
+    script.type = "text/javascript";
+    script.src = SITE_SEAL_SRC;
+    span.appendChild(script);
+  }, []);
+
+  return <span id="siteseal" ref={ref} />;
+}
 
 function scrollToForm() {
   const el = document.getElementById("form-section");
@@ -111,6 +131,9 @@ export function PublicLayout({ children }: { children: React.ReactNode }) {
             </div>
             <p>{disclosures.replacement}</p>
             <p>{disclosures.iul}</p>
+            <div className="flex justify-center pt-4">
+              <SiteSeal />
+            </div>
             <p className="text-center pt-4">
               &copy; {new Date().getFullYear()} {site.brand}. All rights reserved. Website by{" "}
               <a

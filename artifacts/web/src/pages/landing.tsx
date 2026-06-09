@@ -116,22 +116,23 @@ export default function Landing() {
       {/* 1. Hero — one clear offer, trust stack, and the quote form */}
       <section className="relative overflow-hidden bg-navy text-white pt-10 pb-14 lg:pt-16 lg:pb-20">
         <div className="absolute inset-0 z-0">
+          <img src="/hero.png" alt="Veteran and family reviewing options together" className="w-full h-full object-cover opacity-20" />
+          <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/90 to-navy/40"></div>
           <img
-            src="/hero-logo-bg.png"
+            src="/hero-logo-watermark.png"
             alt=""
             aria-hidden="true"
-            className="pointer-events-none select-none w-full h-full object-contain object-top sm:object-center opacity-60"
+            className="pointer-events-none select-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] max-w-none sm:w-[90%] sm:max-w-4xl opacity-[0.07]"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-navy/70 via-navy/55 to-navy/40 sm:bg-gradient-to-r sm:from-navy/90 sm:via-navy/70 sm:to-navy/30"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-start">
             <div className="max-w-2xl">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight mb-5 [text-shadow:0_2px_12px_rgba(10,30,63,0.85)]">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight mb-5">
                 {hero.headline}
               </h1>
-              <p className="text-lg md:text-xl text-white/90 mb-6 leading-relaxed [text-shadow:0_1px_8px_rgba(10,30,63,0.8)]">
+              <p className="text-lg md:text-xl text-white/90 mb-6 leading-relaxed">
                 {hero.subheadline}
               </p>
 

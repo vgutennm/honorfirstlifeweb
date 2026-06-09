@@ -115,15 +115,19 @@ export default function Landing() {
     <PublicLayout>
       {/* 1. Hero — one clear offer, trust stack, and the quote form */}
       <section className="relative overflow-hidden bg-navy text-white pt-10 pb-14 lg:pt-16 lg:pb-20">
-        <div className="absolute inset-0 z-0">
-          <img src="/hero-veteran-mobile.png" alt="" aria-hidden="true" className="w-full h-full object-cover object-center sm:hidden" />
-          <img src="/hero-veteran.png" alt="" aria-hidden="true" className="hidden sm:block w-full h-full object-cover object-center" />
-          <div className="absolute inset-0 bg-gradient-to-b from-navy/50 via-navy/30 to-navy/35 sm:bg-gradient-to-r sm:from-navy/95 sm:via-navy/45 sm:to-navy/10"></div>
+        <div className="absolute inset-0 z-0 hidden sm:block">
+          <img src="/hero-veteran.png" alt="" aria-hidden="true" className="w-full h-full object-cover object-center" />
+          <div className="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/45 to-navy/10"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-start">
-            <div className="max-w-2xl">
+            <div className="max-w-2xl relative">
+              {/* Mobile-only hero background, scoped to the text block so it ends just above the form */}
+              <div aria-hidden className="pointer-events-none absolute inset-y-0 left-1/2 -translate-x-1/2 w-screen -z-10 sm:hidden">
+                <img src="/hero-veteran-mobile.png" alt="" className="w-full h-full object-cover object-center" />
+                <div className="absolute inset-0 bg-gradient-to-b from-navy/50 via-navy/30 to-navy/35"></div>
+              </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight mb-5 [text-shadow:0_2px_14px_rgba(10,30,63,0.9)]">
                 {hero.headline}
               </h1>

@@ -120,18 +120,18 @@ export default function Landing() {
             src="/hero-logo-bg.png"
             alt=""
             aria-hidden="true"
-            className="pointer-events-none select-none w-full h-full object-contain object-top sm:object-center opacity-25"
+            className="pointer-events-none select-none w-full h-full object-contain object-top sm:object-center opacity-60"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-navy/85 via-navy/80 to-navy/60 sm:bg-gradient-to-r sm:from-navy sm:via-navy/90 sm:to-navy/40"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-navy/70 via-navy/55 to-navy/40 sm:bg-gradient-to-r sm:from-navy/90 sm:via-navy/70 sm:to-navy/30"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-start">
             <div className="max-w-2xl">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight mb-5">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight mb-5 [text-shadow:0_2px_12px_rgba(10,30,63,0.85)]">
                 {hero.headline}
               </h1>
-              <p className="text-lg md:text-xl text-white/90 mb-6 leading-relaxed">
+              <p className="text-lg md:text-xl text-white/90 mb-6 leading-relaxed [text-shadow:0_1px_8px_rgba(10,30,63,0.8)]">
                 {hero.subheadline}
               </p>
 

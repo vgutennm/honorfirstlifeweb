@@ -116,8 +116,9 @@ export default function Landing() {
       {/* 1. Hero — one clear offer, trust stack, and the quote form */}
       <section className="relative overflow-hidden bg-navy text-white pt-10 pb-14 lg:pt-16 lg:pb-20">
         <div className="absolute inset-0 z-0">
-          <img src="/hero-veteran.png" alt="" aria-hidden="true" className="w-full h-full object-cover object-right sm:object-center" />
-          <div className="absolute inset-0 bg-gradient-to-b from-navy/85 via-navy/55 to-navy/35 sm:bg-gradient-to-r sm:from-navy/95 sm:via-navy/45 sm:to-navy/10"></div>
+          <img src="/hero-veteran-mobile.png" alt="" aria-hidden="true" className="w-full h-full object-cover object-center sm:hidden" />
+          <img src="/hero-veteran.png" alt="" aria-hidden="true" className="hidden sm:block w-full h-full object-cover object-center" />
+          <div className="absolute inset-0 bg-gradient-to-b from-navy/80 via-navy/45 to-navy/30 sm:bg-gradient-to-r sm:from-navy/95 sm:via-navy/45 sm:to-navy/10"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">

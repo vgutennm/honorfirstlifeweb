@@ -150,7 +150,7 @@ export function PublicLayout({ children }: { children: React.ReactNode }) {
         </div>
       </footer>
 
-      {/* Mobile sticky CTA bar — two buttons only: Get Quote / Call Now */}
+      {/* Mobile sticky CTA bar — three buttons: Quote / Call / Text */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 p-3 bg-white border-t shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] flex gap-2 z-50">
         <button
           onClick={() => {
@@ -166,7 +166,14 @@ export function PublicLayout({ children }: { children: React.ReactNode }) {
           onClick={() => track("click_call_sticky_mobile")}
           className="flex-1 bg-secondary text-secondary-foreground flex items-center justify-center gap-1.5 py-3 rounded-md font-bold text-sm"
         >
-          <Phone className="h-4 w-4" /> Call Now
+          <Phone className="h-4 w-4" /> Call
+        </a>
+        <a
+          href={`sms:${site.phoneSms}`}
+          onClick={() => track("click_text_sticky_mobile")}
+          className="flex-1 bg-secondary text-secondary-foreground flex items-center justify-center gap-1.5 py-3 rounded-md font-bold text-sm"
+        >
+          <MessageSquare className="h-4 w-4" /> Text
         </a>
       </div>
     </div>

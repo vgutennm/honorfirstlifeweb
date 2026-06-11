@@ -1,0 +1,134 @@
+We need to update this Replit website for Google Tag Manager tracking and create a dedicated Thank You page.
+
+Project details:
+Website URL: https://honorfirstlife.com/
+Google Ads ID: 557-213-8780
+Google Tag Manager Container ID: GTM-NC6DHW8T
+Google Analytics 4 Measurement ID: G-68H46Y0JWX
+
+Important context:
+The PPC team has already configured GA4 and Google Ads conversion tracking inside Google Tag Manager. The main job on this website is to install the GTM container correctly and create a dedicated Thank You page.
+
+Important form note:
+Do not modify, replace, rebuild, or troubleshoot the embedded form on this website. The form is controlled by a separate Replit app. That separate app will be updated separately so that after successful submission it redirects users to:
+
+https://honorfirstlife.com/thank-you
+
+Please do the following:
+
+1. Install Google Tag Manager globally
+
+Add the official Google Tag Manager script as high as possible inside the <head> section of the main HTML template or root layout so it loads on every page:
+
+<!-- Google Tag Manager -->
+
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NC6DHW8T');
+</script>
+
+<!-- End Google Tag Manager -->
+
+2. Add the GTM noscript code
+
+Add this immediately after the opening <body> tag in the main HTML template or root layout:
+
+<!-- Google Tag Manager noscript -->
+
+<noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NC6DHW8T"
+height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager noscript -->
+
+3. Do not separately install GA4 or Google Ads scripts
+
+Do not add a separate gtag.js script for GA4.
+
+Do not add a separate Google Ads tracking script.
+
+Since GA4 and Google Ads tracking are being handled inside GTM, adding separate scripts could create duplicate tracking.
+
+Only install the GTM container unless the PPC team later gives different instructions.
+
+4. Create a dedicated Thank You page
+
+Create a new page at:
+
+/thank-you
+
+The live URL should be:
+
+https://honorfirstlife.com/thank-you
+
+The page should be simple, clean, mobile friendly, and match the existing website design.
+
+Use this page content:
+
+Headline:
+Thank You
+
+Body text:
+Your request has been received. A licensed insurance agent may contact you shortly.
+
+Secondary text:
+You can close this page or return to the home page.
+
+Button:
+Return to Home
+
+Button link:
+/
+
+5. Make sure the Thank You page is crawl safe and conversion friendly
+
+The Thank You page should be accessible directly at /thank-you.
+
+Do not require form data to view the page.
+
+Do not block the page with JavaScript.
+
+Keep the page lightweight so Google Tag Manager can fire properly when someone lands there.
+
+6. Confirm global tracking coverage
+
+Make sure GTM loads on:
+
+Home page
+All existing site pages
+The new /thank-you page
+Any route handled by the current app
+
+7. Add clear code comments
+
+Add comments showing:
+
+Where the GTM head script was added
+Where the GTM noscript iframe was added
+Where the /thank-you route or page was created
+
+8. Do not change the embedded form
+
+Do not alter the embedded form script, iframe, component, endpoint, styling, or submission behavior.
+
+The embedded form redirect will be handled separately from the form app.
+
+Only make sure the destination page exists and that GTM loads on it.
+
+9. Final verification checklist
+
+After implementation, confirm:
+
+GTM-NC6DHW8T appears in the live page source
+The GTM script is inside the head
+The noscript iframe is immediately after the opening body tag
+https://honorfirstlife.com/thank-you loads successfully
+GTM loads on the /thank-you page
+No duplicate GA4 gtag.js script was added
+No duplicate Google Ads tracking script was added
+The existing embedded form was not changed
+The site builds successfully
+The site can be pushed to GitHub for cPanel Git deployment

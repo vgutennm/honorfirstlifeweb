@@ -9,6 +9,7 @@ import Landing from "@/pages/landing";
 import PrivacyPolicy from "@/pages/privacy-policy";
 import Terms from "@/pages/terms";
 import NotAffiliated from "@/pages/not-affiliated-with-va";
+import ThankYou from "@/pages/thank-you";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,8 @@ function Router() {
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route path="/terms" component={Terms} />
       <Route path="/not-affiliated-with-va" component={NotAffiliated} />
+      {/* Dedicated Thank You / conversion page — destination for the form app's post-submit redirect */}
+      <Route path="/thank-you" component={ThankYou} />
 
       <Route component={NotFound} />
     </Switch>
